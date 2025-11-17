@@ -20,7 +20,7 @@ const MyBrands = () => {
   return (
     <div id="about" className="bg-white py-10">
       <div className=" flex justify-center items-center text-center mb-6">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-snug">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-snug">
           My Brands{" "}
         </h1>
       </div>
@@ -32,14 +32,14 @@ const MyBrands = () => {
             {brands.map((brand) => (
               <div
                 key={brand.image}
-                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500 flex justify-center items-center" 
+                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500 flex justify-center items-center"
               >
                 <Image
                   src={brand.image}
                   width={400}
                   height={300}
                   alt={brand.name}
-                  className="object-cover h-full w-full" 
+                  className="object-cover h-full w-full"
                 />
               </div>
             ))}

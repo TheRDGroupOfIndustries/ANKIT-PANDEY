@@ -150,7 +150,7 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer"
+                  className="bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer"
                 >
                   Subscribe
                 </button>
@@ -226,7 +226,6 @@ const Footer = () => {
         <section className="bg-gray-900 ">
           <div className="max-w-7xl mx-auto lg:px-8">
             <div className="pt-12 border-t border-gray-800">
-           
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {stats.map((stat, idx) => (
                   <div

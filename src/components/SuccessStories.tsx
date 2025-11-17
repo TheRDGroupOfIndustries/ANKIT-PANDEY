@@ -105,7 +105,7 @@ const SuccessStories = () => {
           </div> */}
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             What My Students &{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-green-600 to-emerald-500">
               Clients Say
             </span>
           </h2>
@@ -208,7 +208,7 @@ const SuccessStories = () => {
         {/* Stats */}
         <section className="w-full py-10">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl">
+            <div className="bg-linear-to-r from-blue-50 to-cyan-50 rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
                 {/* 1️⃣ Students Trained */}
                 <div className="p-4 transform hover:scale-105 transition-transform duration-300">

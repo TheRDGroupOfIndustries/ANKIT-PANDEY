@@ -183,7 +183,7 @@ const Clients = () => {
   return (
     <div id="about" className="bg-gray-50 py-10">
       <div className=" flex justify-center items-center text-center mb-6">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-snug">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-snug">
           Clients{" "}
         </h1>
       </div>

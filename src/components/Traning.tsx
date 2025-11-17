@@ -73,7 +73,7 @@ const Traning = () => {
   return (
     <div id="training" className="bg-gray-50 py-10">
       <div className=" flex justify-center items-center">
-        <h1 className="text-4xl md:text-5xl h-16 font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl h-16 font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           Training Programs
         </h1>
       </div>
@@ -84,7 +84,7 @@ const Traning = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Master Digital Marketing with{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-red-500">
                 Expert-Led Courses
               </span>
             </h2>
@@ -107,7 +107,7 @@ const Traning = () => {
               >
                 {course.popular && (
                   <div className="absolute top-4 right-4 z-10">
-                    <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <div className="bg-linear-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Most Popular
                     </div>
                   </div>
@@ -118,7 +118,7 @@ const Traning = () => {
                     className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110"
                     src={course.imageUrl}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
                     <span className="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
                       {course.level}
@@ -157,7 +157,7 @@ const Traning = () => {
                     <button
                       className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 whitespace-nowrap cursor-pointer ${
                         course.popular
-                          ? "bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white"
+                          ? "bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white"
                           : "bg-gray-100 hover:bg-blue-100 text-gray-700 hover:text-blue-600"
                       }`}
                     >
@@ -172,7 +172,7 @@ const Traning = () => {
           {/* Call-to-action */}
           <div className="text-center mt-16">
             {/* Reduced padding on mobile (p-8) compared to large screens (p-12) */}
-            <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl p-8 sm:p-12">
+            <div className="bg-linear-to-r from-orange-50 to-red-50 rounded-3xl p-8 sm:p-12">
               {/* Reduced heading size on mobile (text-2xl) */}
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                 Not Sure Which Course is Right for You?
@@ -190,7 +190,7 @@ const Traning = () => {
                     section?.scrollIntoView({ behavior: "smooth" });
                   }}
                   // Reduced text and padding on mobile (text-base, px-6, py-3)
-                  className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
+                  className="bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                 >
                   Free Course Consultation
                 </button>

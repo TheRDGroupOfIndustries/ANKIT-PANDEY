@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div id="about" className="bg-gray-50 py-10">
       <div className=" flex justify-center items-center text-center mb-6">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-snug">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-snug">
           About Me
         </h1>
       </div>
@@ -20,7 +20,7 @@ const About = () => {
                   alt="Ankit Pandey - Digital Marketing Expert"
                   className="w-full h-[500px] object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-blue-900/20 to-transparent" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl">
                 <div className="text-center">
@@ -37,7 +37,7 @@ const About = () => {
               <div className="space-y-6">
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                   Digital Marketing{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                  <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
                     Strategist & Trainer
                   </span>
                 </h2>
@@ -59,7 +59,7 @@ const About = () => {
               <div className="grid md:grid-cols-2 sm:grid-cols gap-6">
                 <div className="bg-white rounded-xl p-6 shadow-lg  border-l-4 border-blue-500">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-linear-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
                       <i className="ri-graduation-cap-line text-white text-xl"></i>
                     </div>
                     <div>
@@ -74,7 +74,7 @@ const About = () => {
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-linear-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
                       <i className="ri-building-line text-white text-xl"></i>
                     </div>
                     <div>
@@ -88,7 +88,7 @@ const About = () => {
               </div>
 
               {/* Mission box */}
-              {/* <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 border-l-4 border-blue-500">
+              {/* <div className="bg-linear-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 border-l-4 border-blue-500">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   My Mission
                 </h3>
@@ -106,7 +106,7 @@ const About = () => {
                     const section = document.getElementById("portfolio");
                     section?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
+                  className="bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                 >
                   View My Work
                 </button>

@@ -8,7 +8,7 @@ const Homecomponent = () => {
 
   return (
     <div id="home">
-      <section className="relative min-h-screen pb-10 flex flex-col overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <section className="relative min-h-screen pb-10 flex flex-col overflow-hidden bg-linear-to-br from-slate-900 via-blue-900 to-indigo-900">
         <Navbar />
 
         {/* Background shapes */}
@@ -36,7 +36,7 @@ const Homecomponent = () => {
                 <h1 className="text-4xl lg:text-7xl font-black leading-tight text-white">
                   Transform Your
                   <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 animate-pulse">
+                  <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 animate-pulse">
                     Digital Success
                   </span>
                 </h1>
@@ -56,10 +56,10 @@ const Homecomponent = () => {
                   href="https://360-salon-academy.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-4 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap overflow-hidden"
+                  className="group relative bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-4 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap overflow-hidden"
                 >
                   <span className="relative z-10">Book Session</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-linear-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Link>
                 <button
                   onClick={() => {
@@ -119,7 +119,7 @@ const Homecomponent = () => {
                   className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-4 text-center hover:bg-white/10 transition-all duration-300 hover:scale-105"
                 >
                   <div
-                    className={`text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r ${stat.color} mb-2`}
+                    className={`text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-linear-to-r ${stat.color} mb-2`}
                   >
                     {stat.value}
                   </div>
@@ -128,7 +128,7 @@ const Homecomponent = () => {
                     {stat.label}
                   </div>
                   <div
-                    className={`w-12 h-1 bg-gradient-to-r ${stat.color} mx-auto mt-3 rounded-full`}
+                    className={`w-12 h-1 bg-linear-to-r ${stat.color} mx-auto mt-3 rounded-full`}
                   />
                 </div>
               ))}

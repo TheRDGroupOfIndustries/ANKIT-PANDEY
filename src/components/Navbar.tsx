@@ -5,22 +5,22 @@ import React, { useState } from "react";
 
 const Navbar: React.FC = () => {
   // State to manage the visibility of the mobile menu
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleNavClick = (item: string) => {
     // Close the mobile menu if open
     if (isOpen) {
-        setIsOpen(false);
+      setIsOpen(false);
     }
 
     const section = document.getElementById(item.toLowerCase());
     if (section) {
       const navHeight = 80; // Height of navbar
       const targetPosition = section.offsetTop - navHeight;
-      
+
       window.scrollTo({
         top: targetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                 href="https://360-salon-academy.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-3 py-3 rounded-md font-semibold text-base transition-all duration-300 whitespace-nowrap cursor-pointer text-center"
+                className=" block w-full bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-3 py-3 rounded-md font-semibold text-base transition-all duration-300 whitespace-nowrap cursor-pointer text-center"
               >
                 Book Free Session
               </Link>
@@ -150,7 +150,7 @@ const Navbar: React.FC = () => {
               href="https://360-salon-academy.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-3 py-3 rounded-md font-semibold text-base transition-all duration-300 whitespace-nowrap cursor-pointer text-center"
+              className="mt-4 block w-full bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-3 py-3 rounded-md font-semibold text-base transition-all duration-300 whitespace-nowrap cursor-pointer text-center"
             >
               Book Free Session
             </Link>

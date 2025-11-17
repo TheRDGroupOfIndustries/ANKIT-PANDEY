@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div id="contact" className="bg-gray-50 pt-10">
       <div className="m-8 flex justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           Contact Us
         </h1>
       </div>
@@ -16,8 +16,8 @@ const Contact = () => {
             <i className="ri-mail-line mr-2"></i>Get In Touch
           </div> */}
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Need Help? <br/> Let's Get Your Business On{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500">
+              Need Help? <br /> Let's Get Your Business On{" "}
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-blue-500">
                 Growth Track.
               </span>
             </h2>
@@ -153,7 +153,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none whitespace-nowrap cursor-pointer"
+                  className="w-full bg-linear-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none whitespace-nowrap cursor-pointer"
                 >
                   Send Message
                 </button>
@@ -165,7 +165,7 @@ const Contact = () => {
               {/* Phone */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <i className="ri-phone-line text-white text-xl"></i>
                   </div>
                   <div>
@@ -183,7 +183,7 @@ const Contact = () => {
               {/* Email */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-linear-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <i className="ri-mail-line text-white text-xl"></i>
                   </div>
                   <div>
@@ -201,7 +201,7 @@ const Contact = () => {
               {/* Schedule */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <i className="ri-calendar-line text-white text-xl"></i>
                   </div>
                   <div>
@@ -252,7 +252,7 @@ const Contact = () => {
               </div>
 
               {/* Quick Response */}
-              <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-6 border-l-4 border-cyan-500">
+              <div className="bg-linear-to-r from-cyan-50 to-blue-50 rounded-2xl p-6 border-l-4 border-cyan-500">
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Quick Response Guarantee
                 </h4>

@@ -1,12 +1,18 @@
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
+
+interface Partner {
+  image: string;
+  name: string;
+}
 
 export default function InfiniteScrollCarousel({
   partners,
   dir = "right",
   speed = "fast",
-}: any) {
-  const scrollerRefs = useRef([]);
+}: { partners: Partner[]; dir?: "left" | "right"; speed?: "fast" | "slow" }) {
+  // Explicitly type scrollerRefs as an array of HTMLDivElement or null
+  const scrollerRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     // Check if user hasn't opted in for reduced motion
@@ -15,24 +21,23 @@ export default function InfiniteScrollCarousel({
     }
 
     function addAnimation() {
-      scrollerRefs.current.forEach((scroller) => {
+      scrollerRefs.current.forEach((scroller: HTMLDivElement | null) => {
         if (!scroller) return;
 
         // add data-animated="true" to every `.scroller` on the page
         scroller.setAttribute("data-animated", "true");
 
         // Make an array from the elements within `.scroller-inner`
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-        const scrollerContent = Array.from(scrollerInner.children);
+        const scrollerInner = scroller.querySelector(".scroller__inner") as HTMLElement;
+        if (scrollerInner) {
+          const scrollerContent = Array.from(scrollerInner.children);
 
-        // For each item in the array, clone it
-        // add aria-hidden to it
-        // add it into the `.scroller-inner`
-        scrollerContent.forEach((item) => {
-          const duplicatedItem = item.cloneNode(true);
-          duplicatedItem.setAttribute("aria-hidden", "true");
-          scrollerInner.appendChild(duplicatedItem);
-        });
+          scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true) as HTMLElement;
+            duplicatedItem.setAttribute("aria-hidden", "true");
+            scrollerInner.appendChild(duplicatedItem);
+          });
+        }
       });
     }
   }, []);
@@ -158,7 +163,7 @@ export default function InfiniteScrollCarousel({
           className={`scroller`}
           data-direction={dir}
           data-speed={speed}
-          ref={(el) => (scrollerRefs.current[1] = el)}
+          ref={(el: HTMLDivElement | null) => (scrollerRefs.current[0] = el) as any}
         >
           <div className="scroller__inner">
             {partners.map((partner, index) => (

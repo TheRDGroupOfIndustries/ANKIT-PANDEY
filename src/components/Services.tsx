@@ -85,7 +85,7 @@ const Services = () => {
   return (
     <div id="services" className=" py-10">
       <div className=" flex justify-center items-center mb-6">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           What I Do
         </h1>
       </div>
@@ -95,7 +95,7 @@ const Services = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Comprehensive Digital Marketing{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
                 Solutions
               </span>
             </h2>
@@ -114,7 +114,7 @@ const Services = () => {
                 className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col "
               >
                 <div
-                  className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 bg-linear-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <i className={`text-white text-2xl ${service.icon}`}></i>
                 </div>
@@ -149,7 +149,7 @@ const Services = () => {
           {/* Call-to-action */}
           <div className="text-center mt-16">
             {/* Reduced padding on mobile (p-8) compared to large screens (p-12) */}
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-8 sm:p-12">
+            <div className="bg-linear-to-r from-blue-50 to-cyan-50 rounded-3xl p-8 sm:p-12">
               {/* Reduced text size on mobile (text-2xl) compared to default (text-3xl) */}
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                 Ready to Transform Your Digital Presence?
@@ -167,7 +167,7 @@ const Services = () => {
                     section?.scrollIntoView({ behavior: "smooth" });
                   }}
                   // Reduced text size on mobile (text-base) compared to default (text-lg)
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
+                  className="bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                 >
                   Get Free Consultation
                 </button>

@@ -33,7 +33,11 @@ const projects: Project[] = [
     description:
       "Strategic B2B marketing campaign focusing on LinkedIn advertising and content marketing for SaaS company.",
     tags: ["B2B"],
-    results: ["400% Qualified Leads", "60% Cost Reduction", "150% Sales Pipeline"],
+    results: [
+      "400% Qualified Leads",
+      "60% Cost Reduction",
+      "150% Sales Pipeline",
+    ],
     imageUrl: "/protfollio/2.jpg",
   },
   {
@@ -42,7 +46,11 @@ const projects: Project[] = [
     description:
       "Helped local restaurant pivot to digital-first approach during COVID with online ordering and social media.",
     tags: ["Local Business"],
-    results: ["400% Online Orders", "200% Social Engagement", "150% Customer Base"],
+    results: [
+      "400% Online Orders",
+      "200% Social Engagement",
+      "150% Customer Base",
+    ],
     imageUrl: "/protfollio/3.jpg",
   },
   {
@@ -51,7 +59,11 @@ const projects: Project[] = [
     description:
       "Full-scale product launch strategy including content marketing, influencer partnerships, and growth hacking.",
     tags: ["SaaS"],
-    results: ["10K+ Users in 3 Months", "25% Monthly Growth", "40% Retention Rate"],
+    results: [
+      "10K+ Users in 3 Months",
+      "25% Monthly Growth",
+      "40% Retention Rate",
+    ],
     imageUrl: "/protfollio/4.jpg",
   },
   {
@@ -60,7 +72,11 @@ const projects: Project[] = [
     description:
       "Digital marketing strategy for healthcare practice focusing on local SEO and patient acquisition.",
     tags: ["Healthcare"],
-    results: ["300% Patient Inquiries", "200% Online Bookings", "150% Practice Revenue"],
+    results: [
+      "300% Patient Inquiries",
+      "200% Online Bookings",
+      "150% Practice Revenue",
+    ],
     imageUrl: "/protfollio/5.jpg",
   },
   {
@@ -69,7 +85,11 @@ const projects: Project[] = [
     description:
       "Scaled online education platform through content marketing, SEO, and strategic partnerships.",
     tags: ["Education"],
-    results: ["500% Student Enrollment", "80% Course Completion", "300% Revenue Growth"],
+    results: [
+      "500% Student Enrollment",
+      "80% Course Completion",
+      "300% Revenue Growth",
+    ],
     imageUrl: "/protfollio/6.jpg",
   },
 ];
@@ -92,24 +112,22 @@ const Portfolio: React.FC = () => {
   const filteredProjects =
     selectedCategory === "All Projects"
       ? projects
-      : projects.filter((project) =>
-          project.tags.includes(selectedCategory)
-        );
+      : projects.filter((project) => project.tags.includes(selectedCategory));
 
   return (
-    <div id="portfolio" className="bg-gray-50">
-        <div className="m-8 flex justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-        Portfolio
+    <div id="portfolio" className="bg-gray-50 pt-10">
+      <div className=" flex justify-center items-center">
+        <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Portfolio
         </h1>
       </div>
-      <section className=" bg-gray-50">
+      <section className=" bg-gray-50 pb-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Proven Results Across{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-500">
                 Multiple Industries
               </span>
             </h2>
@@ -149,7 +167,7 @@ const Portfolio: React.FC = () => {
                     className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-110"
                     src={project.imageUrl}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span

@@ -83,7 +83,11 @@ const posts: BlogPost[] = [
 ];
 
 // Extract unique categories dynamically
-const categories = ["All", ...Array.from(new Set(posts.map((p) => p.category))), "Other"];
+const categories = [
+  "All",
+  ...Array.from(new Set(posts.map((p) => p.category))),
+  "Other",
+];
 
 const Blog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -94,9 +98,9 @@ const Blog: React.FC = () => {
       : posts.filter((post) => post.category === selectedCategory);
 
   return (
-    <div id="blog" className="bg-white">
-      <div className="m-8 flex justify-center items-center">
-        <h1 className="text-4xl md:text-5xl h-14 font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+    <div id="blog" className="bg-white py-10">
+      <div className=" flex justify-center items-center">
+        <h1 className="text-4xl md:text-5xl h-14 font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           My Blogs
         </h1>
       </div>
@@ -106,7 +110,7 @@ const Blog: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Stay Updated With{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-500">
                 The Industry Trends & Updates
               </span>
             </h2>
@@ -172,7 +176,7 @@ const Blog: React.FC = () => {
                     </p>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                       <div className="flex items-center">
-                        <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                        <div className="w-8 h-8 bg-linear-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-3">
                           <span className="text-white text-sm font-semibold">
                             {post.authorInitial}
                           </span>
@@ -196,7 +200,7 @@ const Blog: React.FC = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="mt-20 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-3xl p-12 text-center">
+          <div className="mt-20 bg-linear-to-r from-indigo-50 to-purple-50 rounded-3xl p-12 text-center">
             <div className="max-w-2xl mx-auto">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 Never Miss a Marketing Insight
@@ -211,7 +215,7 @@ const Blog: React.FC = () => {
                   placeholder="Enter your email address"
                   className="flex-1 px-6 py-4 rounded-full border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-900"
                 />
-                <button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer">
+                <button className="bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer">
                   Subscribe
                 </button>
               </div>

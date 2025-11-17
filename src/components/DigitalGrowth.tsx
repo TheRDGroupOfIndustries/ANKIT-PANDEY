@@ -33,10 +33,10 @@ const stats = [
 
 const DigitalGrowth: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-700 relative overflow-hidden">
+    <section className="py-20 bg-linear-to-r from-blue-900 via-blue-800 to-cyan-700 relative overflow-hidden">
       {/* Background overlay */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-white/20 to-transparent"></div>
       </div>
 
       {/* Content */}
@@ -45,7 +45,7 @@ const DigitalGrowth: React.FC = () => {
           {/* Heading */}
           <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
             Start Your Digital Growth{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-orange-300">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-orange-300">
               Journey Today!
             </span>
           </h2>
@@ -63,7 +63,7 @@ const DigitalGrowth: React.FC = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center"
               >
                 <div
-                  className={`w-16 h-16 bg-gradient-to-r ${feature.bgGradient} rounded-full flex items-center justify-center mx-auto mb-4`}
+                  className={`w-16 h-16 bg-linear-to-r ${feature.bgGradient} rounded-full flex items-center justify-center mx-auto mb-4`}
                 >
                   <i className={`${feature.icon} text-white text-2xl`}></i>
                 </div>
@@ -82,7 +82,7 @@ const DigitalGrowth: React.FC = () => {
                 const section = document.getElementById("contact");
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer"
+              className="bg-linear-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer"
             >
               Book Free Strategy Call
             </button>
