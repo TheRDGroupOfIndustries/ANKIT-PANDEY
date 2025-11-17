@@ -83,7 +83,7 @@ const posts: BlogPost[] = [
 ];
 
 // Extract unique categories dynamically
-const categories = ["All", ...Array.from(new Set(posts.map((p) => p.category)))];
+const categories = ["All", ...Array.from(new Set(posts.map((p) => p.category))), "Other"];
 
 const Blog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -95,9 +95,9 @@ const Blog: React.FC = () => {
 
   return (
     <div id="blog" className="bg-white">
-        <div className="m-8 flex justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-          Ours Blogs
+      <div className="m-8 flex justify-center items-center">
+        <h1 className="text-4xl md:text-5xl h-14 font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          My Blogs
         </h1>
       </div>
       <section className=" bg-white">
@@ -105,14 +105,14 @@ const Blog: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Digital Marketing{" "}
+              Stay Updated With{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-500">
-                Blog & Resources
+                The Industry Trends & Updates
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay ahead of the curve with actionable insights, proven
-              strategies, and the latest trends in digital marketing.
+              Stay updated in the fastest-growing industry, learn from the
+              proven techniques, latest trends in industry; p.s. it's free
             </p>
           </div>
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface Course {
@@ -14,7 +15,7 @@ interface Course {
 
 const courses: Course[] = [
   {
-    title: "Digital Marketing Fundamentals",
+    title: "Advanced Digital Marketing",
     description:
       "Master the basics of digital marketing with hands-on projects and real-world applications.",
     features: [
@@ -25,7 +26,7 @@ const courses: Course[] = [
       "+2 more features",
     ],
     level: "Beginner",
-    price: "$299",
+    price: "60,000",
     duration: "8 Weeks",
     imageUrl:
       "https://readdy.ai/api/search-image?query=Digital%20marketing%20fundamentals%20course%20materials%20with%20laptop%2C%20notebooks%2C%20charts%20and%20graphs%2C%20modern%20learning%20environment%2C%20clean%20professional%20setup%2C%20educational%20content%20visible%20on%20screen&width=400&height=300&seq=course-fundamentals&orientation=landscape",
@@ -42,7 +43,7 @@ const courses: Course[] = [
       "+2 more features",
     ],
     level: "Intermediate",
-    price: "$399",
+    price: "30,000",
     duration: "6 Weeks",
     imageUrl:
       "https://readdy.ai/api/search-image?query=Advanced%20SEO%20course%20setup%20with%20multiple%20monitors%20showing%20search%20rankings%2C%20keyword%20research%20tools%2C%20analytics%20dashboards%2C%20professional%20workspace%2C%20technical%20SEO%20elements%20visible&width=400&height=300&seq=course-seo&orientation=landscape",
@@ -60,7 +61,7 @@ const courses: Course[] = [
       "+2 more features",
     ],
     level: "Advanced",
-    price: "$499",
+    price: "30,000",
     duration: "10 Weeks",
     imageUrl:
       "https://readdy.ai/api/search-image?query=Paid%20advertising%20bootcamp%20with%20multiple%20screens%20showing%20Google%20Ads%2C%20Facebook%20Ads%20manager%2C%20campaign%20performance%20metrics%2C%20professional%20digital%20marketing%20workspace%2C%20advertising%20dashboards&width=400&height=300&seq=course-ads&orientation=landscape",
@@ -70,9 +71,9 @@ const courses: Course[] = [
 
 const Traning = () => {
   return (
-    <div id="training" className="bg-gray-50 ">
-      <div className="m-8 flex justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+    <div id="training" className="bg-gray-50 py-10">
+      <div className=" flex justify-center items-center">
+        <h1 className="text-4xl md:text-5xl h-16 font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           Training Programs
         </h1>
       </div>
@@ -147,7 +148,7 @@ const Traning = () => {
                   <div className="flex justify-between items-center pt-4 border-t border-gray-100">
                     <div>
                       <div className="text-2xl font-bold text-gray-900">
-                        {course.price}
+                        Rs. {course.price}
                       </div>
                       <div className="text-sm text-gray-500">
                         {course.duration}
@@ -193,16 +194,15 @@ const Traning = () => {
                 >
                   Free Course Consultation
                 </button>
-                <button
-                  onClick={() => {
-                    const section = document.getElementById("training");
-                    section?.scrollIntoView({ behavior: "smooth" });
-                  }}
+                <Link
+                  href="https://skytouch-inky.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   // Reduced text and padding on mobile (text-base, px-6, py-3)
                   className="border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 whitespace-nowrap cursor-pointer"
                 >
                   View All Courses
-                </button>
+                </Link>
               </div>
             </div>
           </div>

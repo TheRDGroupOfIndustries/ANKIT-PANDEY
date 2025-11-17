@@ -10,12 +10,21 @@ import Contact from "@/components/Contact";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import 'remixicon/fonts/remixicon.css';
+import MyBrands from "@/components/MyBrands";
+import Memberships from "@/components/Memberships";
+import Partnerships from "@/components/Partnerships";
+import InfiniteScrollCarousel from "@/components/InfiniteScrollCarousel";
+import Clients from "@/components/Clients";
 
 export default function Home() {
   return (
     <div>
       <Homecomponent />
       <About />
+      <MyBrands/>
+      <Memberships/>
+      <Partnerships/>
+      <Clients/>
       <Services />
       <Traning />
       <SuccessStories />

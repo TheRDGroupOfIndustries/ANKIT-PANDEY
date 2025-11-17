@@ -15,45 +15,45 @@ const Services = () => {
       ],
       gradient: "from-blue-500 to-cyan-500",
     },
-    {
-      icon: "ri-share-line",
-      title: "Social Media Growth",
-      description:
-        "Build and engage your audience across all major social media platforms with proven tactics.",
-      points: [
-        "Content Strategy",
-        "Community Management",
-        "Influencer Outreach",
-        "Analytics & Reporting",
-      ],
-      gradient: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: "ri-search-line",
-      title: "SEO Optimization",
-      description:
-        "Improve your search engine rankings and drive organic traffic to your website.",
-      points: [
-        "Keyword Research",
-        "On-Page SEO",
-        "Technical SEO",
-        "Link Building",
-      ],
-      gradient: "from-green-500 to-emerald-500",
-    },
-    {
-      icon: "ri-advertisement-line",
-      title: "Paid Ad Campaigns",
-      description:
-        "Maximize your advertising ROI with expertly managed Google Ads and social media campaigns.",
-      points: [
-        "Campaign Setup",
-        "Ad Creation",
-        "Bid Management",
-        "Performance Tracking",
-      ],
-      gradient: "from-orange-500 to-red-500",
-    },
+    // {
+    //   icon: "ri-share-line",
+    //   title: "Social Media Growth",
+    //   description:
+    //     "Build and engage your audience across all major social media platforms with proven tactics.",
+    //   points: [
+    //     "Content Strategy",
+    //     "Community Management",
+    //     "Influencer Outreach",
+    //     "Analytics & Reporting",
+    //   ],
+    //   gradient: "from-purple-500 to-pink-500",
+    // },
+    // {
+    //   icon: "ri-search-line",
+    //   title: "SEO Optimization",
+    //   description:
+    //     "Improve your search engine rankings and drive organic traffic to your website.",
+    //   points: [
+    //     "Keyword Research",
+    //     "On-Page SEO",
+    //     "Technical SEO",
+    //     "Link Building",
+    //   ],
+    //   gradient: "from-green-500 to-emerald-500",
+    // },
+    // {
+    //   icon: "ri-advertisement-line",
+    //   title: "Paid Ad Campaigns",
+    //   description:
+    //     "Maximize your advertising ROI with expertly managed Google Ads and social media campaigns.",
+    //   points: [
+    //     "Campaign Setup",
+    //     "Ad Creation",
+    //     "Bid Management",
+    //     "Performance Tracking",
+    //   ],
+    //   gradient: "from-orange-500 to-red-500",
+    // },
     {
       icon: "ri-user-line",
       title: "1-on-1 Training",
@@ -69,7 +69,7 @@ const Services = () => {
     },
     {
       icon: "ri-team-line",
-      title: "Group Trainings",
+      title: "Group Workshop",
       description:
         "Interactive group sessions perfect for teams and organizations looking to upskill.",
       points: [
@@ -83,12 +83,12 @@ const Services = () => {
   ];
 
   return (
-    <div id="services">
-            <div className="m-8 flex justify-center items-center">
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Services
-              </h1>
-            </div>
+    <div id="services" className=" py-10">
+      <div className=" flex justify-center items-center mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          What I Do
+        </h1>
+      </div>
       <section className=" bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
@@ -111,31 +111,33 @@ const Services = () => {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col "
               >
                 <div
                   className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <i className={`text-white text-2xl ${service.icon}`}></i>
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.points.map((point) => (
-                      <li
-                        key={point}
-                        className="flex items-center text-sm text-gray-600"
-                      >
-                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="space-y-4 flex flex-col justify-between flex-1">
+                  <div className="">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {service.points.map((point) => (
+                        <li
+                          key={point}
+                          className="flex items-center text-sm text-gray-600"
+                        >
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <button className="w-full mt-6 bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-600 py-3 rounded-lg font-medium transition-all duration-300 border border-gray-200 hover:border-blue-200 whitespace-nowrap cursor-pointer">
                     Learn More
                   </button>

@@ -2,18 +2,18 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="bg-gray-50">
-    <div className="m-4 sm:m-6 md:m-8 flex justify-center items-center text-center">
-  <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-snug">
-    About Ankit Pandey
-  </h1>
-</div>
+    <div id="about" className="bg-gray-50 py-10">
+      <div className=" flex justify-center items-center text-center mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-snug">
+          About Me
+        </h1>
+      </div>
 
       <section className=" ">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto py-10 px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
             {/* Image with badge */}
-            <div className="relative">
+            <div className="relative col-span-2">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
                   src="/anket.png"
@@ -33,9 +33,9 @@ const About = () => {
             </div>
 
             {/* Text content */}
-            <div className="space-y-8">
+            <div className="space-y-8 col-span-3">
               <div className="space-y-6">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                   Digital Marketing{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
                     Strategist & Trainer
@@ -57,7 +57,7 @@ const About = () => {
 
               {/* Stats */}
               <div className="grid md:grid-cols-2 sm:grid-cols gap-6">
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <div className="bg-white rounded-xl p-6 shadow-lg  border-l-4 border-blue-500">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
                       <i className="ri-graduation-cap-line text-white text-xl"></i>
@@ -72,7 +72,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
                       <i className="ri-building-line text-white text-xl"></i>
@@ -88,7 +88,7 @@ const About = () => {
               </div>
 
               {/* Mission box */}
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 border-l-4 border-blue-500">
+              {/* <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 border-l-4 border-blue-500">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   My Mission
                 </h3>
@@ -97,10 +97,10 @@ const About = () => {
                   modern digital strategies, creating a world where every
                   business can thrive in the digital age."
                 </p>
-              </div>
+              </div> */}
 
               {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => {
                     const section = document.getElementById("portfolio");
@@ -113,7 +113,7 @@ const About = () => {
                 <button className="ring-2 ring-inset ring-blue-600 text-blue-600 hover:bg-blue-50/50 px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 whitespace-nowrap cursor-pointer">
                   Download Resume
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

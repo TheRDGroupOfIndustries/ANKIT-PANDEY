@@ -2,13 +2,13 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div id="contact" className="bg-gray-50">
+    <div id="contact" className="bg-gray-50 pt-10">
       <div className="m-8 flex justify-center items-center">
         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           Contact Us
         </h1>
       </div>
-      <section className=" bg-gray-50 pb-10">
+      <section className=" bg-gray-50 pb-10 ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
@@ -16,14 +16,14 @@ const Contact = () => {
             <i className="ri-mail-line mr-2"></i>Get In Touch
           </div> */}
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Let's Discuss Your{" "}
+              Need Help? <br/> Let's Get Your Business On{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500">
-                Digital Growth
+                Growth Track.
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business with proven digital marketing
-              strategies? Let's start the conversation today.
+              While you wait, your competitor is already working! Don't delay
+              schedule you call now.
             </p>
           </div>
 
