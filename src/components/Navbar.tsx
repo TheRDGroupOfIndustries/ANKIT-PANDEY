@@ -147,7 +147,7 @@ const Navbar: React.FC = () => {
 
             {/* Mobile Contact Button */}
             <Link
-              href="https://360-salon-academy.vercel.app"
+              href="https://calendly.com/annkitpandey/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 block w-full bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-3 py-3 rounded-md font-semibold text-base transition-all duration-300 whitespace-nowrap cursor-pointer text-center"
