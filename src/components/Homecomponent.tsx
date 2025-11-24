@@ -54,7 +54,7 @@ const Homecomponent = () => {
 
               <div className="flex flex-col sm:flex-row gap-6 items-center">
                 <Link
-                  href="https://360-salon-academy.vercel.app"
+                  href="https://calendly.com/annkitpandey/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-4 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap overflow-hidden"
