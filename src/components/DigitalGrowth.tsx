@@ -1,4 +1,5 @@
-// src/components/DigitalGrowth.tsx
+"use client";
+
 import React from "react";
 
 const features = [

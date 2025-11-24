@@ -1,5 +1,6 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
 
 interface Course {
   title: string;
@@ -13,63 +14,63 @@ interface Course {
   bgGradient?: string;
 }
 
-const courses: Course[] = [
-  {
-    title: "Advanced Digital Marketing",
-    description:
-      "Master the basics of digital marketing with hands-on projects and real-world applications.",
-    features: [
-      "Marketing Strategy Basics",
-      "Social Media Marketing",
-      "Email Marketing",
-      "Content Creation",
-      "+2 more features",
-    ],
-    level: "Beginner",
-    price: "60,000",
-    duration: "8 Weeks",
-    imageUrl:
-      "https://readdy.ai/api/search-image?query=Digital%20marketing%20fundamentals%20course%20materials%20with%20laptop%2C%20notebooks%2C%20charts%20and%20graphs%2C%20modern%20learning%20environment%2C%20clean%20professional%20setup%2C%20educational%20content%20visible%20on%20screen&width=400&height=300&seq=course-fundamentals&orientation=landscape",
-  },
-  {
-    title: "Advanced SEO Mastery",
-    description:
-      "Deep dive into advanced SEO techniques that drive organic traffic and improve rankings.",
-    features: [
-      "Technical SEO Audit",
-      "Advanced Keyword Research",
-      "Link Building Strategies",
-      "Local SEO Optimization",
-      "+2 more features",
-    ],
-    level: "Intermediate",
-    price: "30,000",
-    duration: "6 Weeks",
-    imageUrl:
-      "https://readdy.ai/api/search-image?query=Advanced%20SEO%20course%20setup%20with%20multiple%20monitors%20showing%20search%20rankings%2C%20keyword%20research%20tools%2C%20analytics%20dashboards%2C%20professional%20workspace%2C%20technical%20SEO%20elements%20visible&width=400&height=300&seq=course-seo&orientation=landscape",
-    popular: true,
-  },
-  {
-    title: "Paid Advertising Bootcamp",
-    description:
-      "Become a paid advertising expert with Google Ads, Facebook Ads, and advanced campaign optimization.",
-    features: [
-      "Google Ads Mastery",
-      "Facebook & Instagram Ads",
-      "Campaign Optimization",
-      "Conversion Tracking",
-      "+2 more features",
-    ],
-    level: "Advanced",
-    price: "30,000",
-    duration: "10 Weeks",
-    imageUrl:
-      "https://readdy.ai/api/search-image?query=Paid%20advertising%20bootcamp%20with%20multiple%20screens%20showing%20Google%20Ads%2C%20Facebook%20Ads%20manager%2C%20campaign%20performance%20metrics%2C%20professional%20digital%20marketing%20workspace%2C%20advertising%20dashboards&width=400&height=300&seq=course-ads&orientation=landscape",
-  },
-  // Add more courses here if needed
-];
+// const courses: Course[] = [
+//   {
+//     title: "Advanced Digital Marketing",
+//     description:
+//       "Master the basics of digital marketing with hands-on projects and real-world applications.",
+//     features: [
+//       "Marketing Strategy Basics",
+//       "Social Media Marketing",
+//       "Email Marketing",
+//       "Content Creation",
+//       "+2 more features",
+//     ],
+//     level: "Beginner",
+//     price: "60,000",
+//     duration: "8 Weeks",
+//     imageUrl:
+//       "https://readdy.ai/api/search-image?query=Digital%20marketing%20fundamentals%20course%20materials%20with%20laptop%2C%20notebooks%2C%20charts%20and%20graphs%2C%20modern%20learning%20environment%2C%20clean%20professional%20setup%2C%20educational%20content%20visible%20on%20screen&width=400&height=300&seq=course-fundamentals&orientation=landscape",
+//   },
+//   {
+//     title: "Advanced SEO Mastery",
+//     description:
+//       "Deep dive into advanced SEO techniques that drive organic traffic and improve rankings.",
+//     features: [
+//       "Technical SEO Audit",
+//       "Advanced Keyword Research",
+//       "Link Building Strategies",
+//       "Local SEO Optimization",
+//       "+2 more features",
+//     ],
+//     level: "Intermediate",
+//     price: "30,000",
+//     duration: "6 Weeks",
+//     imageUrl:
+//       "https://readdy.ai/api/search-image?query=Advanced%20SEO%20course%20setup%20with%20multiple%20monitors%20showing%20search%20rankings%2C%20keyword%20research%20tools%2C%20analytics%20dashboards%2C%20professional%20workspace%2C%20technical%20SEO%20elements%20visible&width=400&height=300&seq=course-seo&orientation=landscape",
+//     popular: true,
+//   },
+//   {
+//     title: "Paid Advertising Bootcamp",
+//     description:
+//       "Become a paid advertising expert with Google Ads, Facebook Ads, and advanced campaign optimization.",
+//     features: [
+//       "Google Ads Mastery",
+//       "Facebook & Instagram Ads",
+//       "Campaign Optimization",
+//       "Conversion Tracking",
+//       "+2 more features",
+//     ],
+//     level: "Advanced",
+//     price: "30,000",
+//     duration: "10 Weeks",
+//     imageUrl:
+//       "https://readdy.ai/api/search-image?query=Paid%20advertising%20bootcamp%20with%20multiple%20screens%20showing%20Google%20Ads%2C%20Facebook%20Ads%20manager%2C%20campaign%20performance%20metrics%2C%20professional%20digital%20marketing%20workspace%2C%20advertising%20dashboards&width=400&height=300&seq=course-ads&orientation=landscape",
+//   },
+//   // Add more courses here if needed
+// ];
 
-const Traning = () => {
+const Traning = ({ courses }: { courses: Course[] }) => {
   return (
     <div id="training" className="bg-gray-50 py-10">
       <div className=" flex justify-center items-center">
@@ -140,7 +141,7 @@ const Traning = () => {
                         key={feature}
                         className="flex items-center text-sm text-gray-600"
                       >
-                        <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 shrink-0"></div>
                         {feature}
                       </li>
                     ))}

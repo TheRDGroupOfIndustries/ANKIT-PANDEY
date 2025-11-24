@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
@@ -10,7 +11,11 @@ export default function InfiniteScrollCarousel({
   partners,
   dir = "right",
   speed = "fast",
-}: { partners: Partner[]; dir?: "left" | "right"; speed?: "fast" | "slow" }) {
+}: {
+  partners: Partner[];
+  dir?: "left" | "right";
+  speed?: "fast" | "slow";
+}) {
   // Explicitly type scrollerRefs as an array of HTMLDivElement or null
   const scrollerRefs = useRef<Array<HTMLDivElement | null>>([]);
 
@@ -28,7 +33,9 @@ export default function InfiniteScrollCarousel({
         scroller.setAttribute("data-animated", "true");
 
         // Make an array from the elements within `.scroller-inner`
-        const scrollerInner = scroller.querySelector(".scroller__inner") as HTMLElement;
+        const scrollerInner = scroller.querySelector(
+          ".scroller__inner"
+        ) as HTMLElement;
         if (scrollerInner) {
           const scrollerContent = Array.from(scrollerInner.children);
 
@@ -163,11 +170,20 @@ export default function InfiniteScrollCarousel({
           className={`scroller`}
           data-direction={dir}
           data-speed={speed}
-          ref={(el: HTMLDivElement | null) => (scrollerRefs.current[0] = el) as any}
+          ref={(el: HTMLDivElement | null) =>
+            (scrollerRefs.current[0] = el) as any
+          }
         >
           <div className="scroller__inner">
             {partners.map((partner, index) => (
-              <Image key={index} src={partner.image} className="shadow-md rounded-xl" alt={partner.name} width={150} height={150} />
+              <Image
+                key={index}
+                src={partner.image}
+                className="shadow-md rounded-xl"
+                alt={partner.name}
+                width={150}
+                height={150}
+              />
             ))}
           </div>
         </div>

@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+
 import InfiniteScrollCarousel from "./InfiniteScrollCarousel";
 
 const partners = [

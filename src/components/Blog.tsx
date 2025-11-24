@@ -2,96 +2,100 @@
 
 import React, { useState } from "react";
 
-interface BlogPost {
+
+export interface BlogPost {
+  _id: string;
   title: string;
-  description: string;
   category: string;
-  date: string;
-  readTime: string;
+  thumbnail: string;
+  publishedAt: string; // formatted date for UI, e.g. "Dec 15, 2023"
+  readTime: string; // "8 min read"
+  excerpt: string; // excerpt
   author: string;
   authorInitial: string;
-  imageUrl: string;
 }
 
-const posts: BlogPost[] = [
-  {
-    title: "10 Digital Marketing Trends That Will Dominate 2024",
-    description:
-      "Discover the latest trends in digital marketing and how to leverage them for your business growth in the coming year.",
-    category: "Trends",
-    date: "Dec 15, 2023",
-    readTime: "8 min read",
-    author: "Ankit Pandey",
-    authorInitial: "A",
-    imageUrl: "/blog/1.jpg",
-  },
-  {
-    title: "How to Build a High-Converting Sales Funnel",
-    description:
-      "Step-by-step guide to creating sales funnels that convert visitors into customers and maximize your revenue.",
-    category: "Strategy",
-    date: "Dec 10, 2023",
-    readTime: "12 min read",
-    author: "Ankit Pandey",
-    authorInitial: "A",
-    imageUrl: "/blog/2.jpg",
-  },
-  {
-    title: "SEO Secrets: Rank #1 on Google in 90 Days",
-    description:
-      "Proven SEO strategies and techniques that helped my clients achieve top rankings and drive organic traffic.",
-    category: "SEO",
-    date: "Dec 5, 2023",
-    readTime: "15 min read",
-    author: "Ankit Pandey",
-    authorInitial: "A",
-    imageUrl: "/blog/3.jpg",
-  },
-  {
-    title: "Social Media Marketing: From Zero to Hero",
-    description:
-      "Complete guide to building a strong social media presence that engages your audience and drives business results.",
-    category: "Social Media",
-    date: "Nov 28, 2023",
-    readTime: "10 min read",
-    author: "Ankit Pandey",
-    authorInitial: "A",
-    imageUrl: "/blog/4.jpg",
-  },
-  {
-    title: "Email Marketing Automation That Actually Works",
-    description:
-      "Learn how to set up email sequences that nurture leads and convert them into loyal customers automatically.",
-    category: "Email Marketing",
-    date: "Nov 20, 2023",
-    readTime: "9 min read",
-    author: "Ankit Pandey",
-    authorInitial: "A",
-    imageUrl: "/blog/5.jpg",
-  },
-  {
-    title: "Paid Advertising: Maximize ROI with Smart Strategies",
-    description:
-      "Advanced techniques for Google Ads and Facebook Ads that reduce costs while increasing conversions and sales.",
-    category: "Paid Ads",
-    date: "Nov 15, 2023",
-    readTime: "11 min read",
-    author: "Ankit Pandey",
-    authorInitial: "A",
-    imageUrl: "/blog/6.jpg",
-  },
-];
+// const posts: BlogPost[] = [
+//   {
+//     title: "10 Digital Marketing Trends That Will Dominate 2024",
+//     description:
+//       "Discover the latest trends in digital marketing and how to leverage them for your business growth in the coming year.",
+//     category: "Trends",
+//     date: "Dec 15, 2023",
+//     readTime: "8 min read",
+//     author: "Ankit Pandey",
+//     authorInitial: "A",
+//     imageUrl: "/blog/1.jpg",
+//   },
+//   {
+//     title: "How to Build a High-Converting Sales Funnel",
+//     description:
+//       "Step-by-step guide to creating sales funnels that convert visitors into customers and maximize your revenue.",
+//     category: "Strategy",
+//     date: "Dec 10, 2023",
+//     readTime: "12 min read",
+//     author: "Ankit Pandey",
+//     authorInitial: "A",
+//     imageUrl: "/blog/2.jpg",
+//   },
+//   {
+//     title: "SEO Secrets: Rank #1 on Google in 90 Days",
+//     description:
+//       "Proven SEO strategies and techniques that helped my clients achieve top rankings and drive organic traffic.",
+//     category: "SEO",
+//     date: "Dec 5, 2023",
+//     readTime: "15 min read",
+//     author: "Ankit Pandey",
+//     authorInitial: "A",
+//     imageUrl: "/blog/3.jpg",
+//   },
+//   {
+//     title: "Social Media Marketing: From Zero to Hero",
+//     description:
+//       "Complete guide to building a strong social media presence that engages your audience and drives business results.",
+//     category: "Social Media",
+//     date: "Nov 28, 2023",
+//     readTime: "10 min read",
+//     author: "Ankit Pandey",
+//     authorInitial: "A",
+//     imageUrl: "/blog/4.jpg",
+//   },
+//   {
+//     title: "Email Marketing Automation That Actually Works",
+//     description:
+//       "Learn how to set up email sequences that nurture leads and convert them into loyal customers automatically.",
+//     category: "Email Marketing",
+//     date: "Nov 20, 2023",
+//     readTime: "9 min read",
+//     author: "Ankit Pandey",
+//     authorInitial: "A",
+//     imageUrl: "/blog/5.jpg",
+//   },
+//   {
+//     title: "Paid Advertising: Maximize ROI with Smart Strategies",
+//     description:
+//       "Advanced techniques for Google Ads and Facebook Ads that reduce costs while increasing conversions and sales.",
+//     category: "Paid Ads",
+//     date: "Nov 15, 2023",
+//     readTime: "11 min read",
+//     author: "Ankit Pandey",
+//     authorInitial: "A",
+//     imageUrl: "/blog/6.jpg",
+//   },
+// ];
 
 // Extract unique categories dynamically
-const categories = [
-  "All",
-  ...Array.from(new Set(posts.map((p) => p.category))),
-  "Other",
-];
 
-const Blog: React.FC = () => {
+
+const Blog = ({ posts }: { posts: BlogPost[] }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-
+  
+  const categories = [
+    "All",
+    ...Array.from(new Set(posts.map((p) => p.category))),
+    "Other",
+  ];
+  
   const filteredPosts =
     selectedCategory === "All"
       ? posts
@@ -142,14 +146,14 @@ const Blog: React.FC = () => {
             {filteredPosts.length > 0 ? (
               filteredPosts.map((post, idx) => (
                 <article
-                  key={idx}
+                  key={post._id ?? idx}
                   className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
                       alt={post.title}
                       className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-110"
-                      src={post.imageUrl}
+                      src={post.thumbnail}
                     />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-indigo-600 text-white rounded-full text-xs font-semibold">
@@ -157,23 +161,27 @@ const Blog: React.FC = () => {
                       </span>
                     </div>
                   </div>
+
                   <div className="p-6 space-y-4">
                     <div className="flex items-center text-sm text-gray-500 space-x-4">
                       <span className="flex items-center">
                         <i className="ri-calendar-line mr-1"></i>
-                        {post.date}
+                        {post.publishedAt}
                       </span>
                       <span className="flex items-center">
                         <i className="ri-time-line mr-1"></i>
-                        {post.readTime}
+                        {post.readTime} min read
                       </span>
                     </div>
+
                     <h3 className="text-xl font-bold text-gray-900 leading-tight hover:text-indigo-600 transition-colors duration-300">
                       {post.title}
                     </h3>
+
                     <p className="text-gray-600 leading-relaxed">
-                      {post.description}
+                      {post.excerpt}
                     </p>
+
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                       <div className="flex items-center">
                         <div className="w-8 h-8 bg-linear-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-3">
@@ -185,6 +193,7 @@ const Blog: React.FC = () => {
                           {post.author}
                         </span>
                       </div>
+
                       <button className="text-indigo-600 hover:text-indigo-700 font-medium text-sm transition-colors duration-300 cursor-pointer">
                         Read More →
                       </button>

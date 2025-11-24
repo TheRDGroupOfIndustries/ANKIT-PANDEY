@@ -1,5 +1,4 @@
-import React from "react";
-
+"use client";
 const About = () => {
   return (
     <div id="about" className="bg-gray-50 py-10">

@@ -1,4 +1,3 @@
-"use client";
 import About from "@/components/About";
 import Blog from "@/components/Blog";
 import Homecomponent from "@/components/Homecomponent";
@@ -15,23 +14,36 @@ import Memberships from "@/components/Memberships";
 import Partnerships from "@/components/Partnerships";
 import InfiniteScrollCarousel from "@/components/InfiniteScrollCarousel";
 import Clients from "@/components/Clients";
+import { getBlogs, getCourses, getPortfolios, getTestimonials } from "@/sanity/lib/client";
 
-export default function Home() {
+export default async function Home() {
+  const courses = await getCourses();
+  // console.log(courses);
+
+  const testimonials = await getTestimonials();
+  // console.log(testimonials);
+
+  const projects = await getPortfolios();
+  // console.log(projects);
+
+  const posts = await getBlogs();
+  // console.log(posts);
+  
   return (
     <div>
       <Homecomponent />
       <About />
-      <MyBrands/>
-      <Memberships/>
-      <Partnerships/>
-      <Clients/>
+      <MyBrands />
+      <Memberships />
+      <Partnerships />
+      <Clients />
       <Services />
-      <Traning />
-      <SuccessStories />
-      <Portfolio />
-      <Blog />
-      <Contact/>
-      <Footer/>
+      <Traning courses={courses} />
+      <SuccessStories testimonials={testimonials} />
+      <Portfolio projects={projects} />
+      <Blog posts={posts} />
+      <Contact />
+      <Footer />
     </div>
   );
 }
