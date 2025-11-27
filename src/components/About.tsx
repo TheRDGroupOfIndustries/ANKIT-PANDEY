@@ -1,4 +1,7 @@
 "use client";
+
+import Image from "next/image";
+
 const About = () => {
   return (
     <div id="about" className="bg-gray-50 py-10">
@@ -14,7 +17,9 @@ const About = () => {
             {/* Image with badge */}
             <div className="relative col-span-2">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                <img
+                <Image
+                width={200}
+                height={200}
                   src="/anket.png"
                   alt="Ankit Pandey - Digital Marketing Expert"
                   className="w-full h-[500px] object-cover object-top"

@@ -78,8 +78,8 @@ const Partnerships = () => {
       {/* Header */}
       <div className="text-center">
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          "All Leading Radio, Cinema & Newspapers In Varanasi Through Verified &
-          Trusted Vendors"
+          &ldquo;All Leading Radio, Cinema & Newspapers In Varanasi Through Verified &
+          Trusted Vendors&ldquo;
         </p>
       </div>
     </div>

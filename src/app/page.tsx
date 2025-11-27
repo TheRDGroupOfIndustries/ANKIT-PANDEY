@@ -6,13 +6,11 @@ import Services from "@/components/Services";
 import SuccessStories from "@/components/SuccessStories";
 import Traning from "@/components/Traning";
 import Contact from "@/components/Contact";
-import Image from "next/image";
 import Footer from "@/components/Footer";
 import 'remixicon/fonts/remixicon.css';
 import MyBrands from "@/components/MyBrands";
 import Memberships from "@/components/Memberships";
 import Partnerships from "@/components/Partnerships";
-import InfiniteScrollCarousel from "@/components/InfiniteScrollCarousel";
 import Clients from "@/components/Clients";
 import { getBlogs, getCourses, getPortfolios, getTestimonials } from "@/sanity/lib/client";
 
@@ -30,7 +28,7 @@ export default async function Home() {
   // console.log(posts);
   
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Homecomponent />
       <About />
       <MyBrands />
@@ -39,7 +37,7 @@ export default async function Home() {
       <Clients />
       <Services />
       <Traning courses={courses} />
-      <SuccessStories testimonials={testimonials} />
+      <SuccessStories />
       <Portfolio projects={projects} />
       <Blog posts={posts} />
       <Contact />
