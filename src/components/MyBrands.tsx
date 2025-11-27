@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import InfiniteScrollCarousel from "./InfiniteScrollCarousel";
 
 const brands = [
   {
@@ -25,30 +26,31 @@ const MyBrands = () => {
           My Brands{" "}
         </h1>
       </div>
-
-      <section className=" ">
-        <div className="max-w-7xl mx-auto py-10 px-6 lg:px-8">
-          {/* Removed the unnecessary 'space-y-8 col-span-3' wrapper */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {brands.map((brand) => (
-              <div
-                key={brand.image}
-                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500 flex justify-center items-center"
-              >
-                <Image
-                  src={brand.image}
-                  width={400}
-                  height={300}
-                  alt={brand.name}
-                  className="object-cover h-full w-full"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <InfiniteScrollCarousel partners={brands} dir="left" speed="fast" />
     </div>
   );
 };
 
 export default MyBrands;
+
+//  <section className=" ">
+//         <div className="max-w-7xl mx-auto py-10 px-6 lg:px-8">
+//           {/* Removed the unnecessary 'space-y-8 col-span-3' wrapper */}
+//           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+//             {brands.map((brand) => (
+//               <div
+//                 key={brand.image}
+//                 className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500 flex justify-center items-center"
+//               >
+//                 <Image
+//                   src={brand.image}
+//                   width={400}
+//                   height={300}
+//                   alt={brand.name}
+//                   className="object-cover h-full w-full"
+//                 />
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export interface Testimonial {
@@ -12,80 +14,14 @@ export interface Testimonial {
   company: string;
   authorImage: string;
 }
-
-// const testimonials: Testimonial[] = [
-//   {
-//     id: 1,
-//     stars: 5,
-//     quote:
-//       "Ankit's digital marketing strategy transformed our online presence completely. We saw a 300% increase in qualified leads within just 3 months. His expertise in SEO and paid advertising is unmatched.",
-//     badge: "300% Lead Increase",
-//     name: "Sarah Johnson",
-//     position: "Marketing Director",
-//     company: "TechStart Inc.",
-//     img: "/stories/1.jpg",
-//   },
-//   {
-//     id: 2,
-//     stars: 5,
-//     quote:
-//       "The ROI from Ankit's training program was incredible. Not only did I learn advanced marketing techniques, but I also implemented them to grow my e-commerce business by 250% in revenue.",
-//     badge: "250% Revenue Growth",
-//     name: "Michael Chen",
-//     position: "E-commerce Founder",
-//     company: "StyleHub",
-//     img: "/stories/2.jpg",
-//   },
-//   {
-//     id: 3,
-//     stars: 5,
-//     quote:
-//       "As a complete beginner, Ankit's course gave me the confidence and skills to start my own digital marketing agency. His teaching style is clear, practical, and results-oriented.",
-//     badge: "Started Own Agency",
-//     name: "Emily Rodriguez",
-//     position: "Digital Marketing Student",
-//     company: "Freelancer",
-//     img: "/stories/3.jpg",
-//   },
-//   {
-//     id: 4,
-//     stars: 5,
-//     quote:
-//       "Ankit helped us pivot our restaurant business during COVID with a strong digital presence. Our online orders increased by 400% and we now have a thriving delivery business.",
-//     badge: "400% Online Orders",
-//     name: "David Thompson",
-//     position: "Restaurant Owner",
-//     company: "Bella Vista Restaurant",
-//     img: "/stories/4.jpg",
-//   },
-//   {
-//     id: 5,
-//     stars: 5,
-//     quote:
-//       "The advanced SEO course was a game-changer for our B2B company. We now rank #1 for our target keywords and our organic traffic has tripled. Ankit's expertise is phenomenal.",
-//     badge: "Tripled Organic Traffic",
-//     name: "Lisa Park",
-//     position: "Marketing Manager",
-//     company: "HealthTech Solutions",
-//     img: "/stories/5.jpg",
-//   },
-//   {
-//     id: 6,
-//     stars: 5,
-//     quote:
-//       "Ankit's strategic guidance helped us achieve product-market fit faster. His data-driven approach to digital marketing gave us the insights we needed to scale effectively.",
-//     badge: "Achieved PMF",
-//     name: "James Wilson",
-//     position: "Startup Co-founder",
-//     company: "InnovateLab",
-//     img: "/stories/6.jpg",
-//   },
-// ];
-
-const SuccessStories = ({ testimonials }: { testimonials: Testimonial[] }) => {
+ const ClientReviews = Array.from({ length: 20 }).map((_, i) => ({
+    image: `/client-review/client_image (${i + 1}).jpeg`,
+    name: `Client ${i + 1}`,
+  }));
+const SuccessStories = () => {
   const [current, setCurrent] = useState(0);
 
-  const slides = Math.ceil(testimonials.length / 3); // number of slides
+  const slides = Math.ceil(ClientReviews.length / 2); // FIXED (2 images per slide)
 
   const prevSlide = () => {
     setCurrent(current === 0 ? slides - 1 : current - 1);
@@ -110,68 +46,47 @@ const SuccessStories = ({ testimonials }: { testimonials: Testimonial[] }) => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real results from real people who've transformed their businesses
-            and careers through digital marketing mastery.
+            Real results from real people who&apos;ve transformed their
+            businesses and careers through digital marketing mastery.
           </p>
         </div>
 
-        {/* Slider */}
         <div className="relative">
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
-              {Array.from({ length: slides }).map((_, slideIndex) => (
-                <div key={slideIndex} className="w-full shrink-0 px-2">
-                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                    {testimonials
-                      .slice(slideIndex * 3, slideIndex * 3 + 3)
-                      .map((t) => (
-                        <div
-                          key={t._id}
-                          className="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                        >
-                          <div className="flex items-center mb-4">
-                            {Array.from({ length: t.rating }).map((_, i) => (
-                              <i
-                                key={i}
-                                className="ri-star-fill text-yellow-400"
-                              ></i>
-                            ))}
-                          </div>
-                          <blockquote className="text-gray-700 leading-relaxed mb-6">
-                            "{t.quote}"
-                          </blockquote>
-                          <div className="mb-6">
-                            <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
-                              <i className="ri-trophy-line mr-2"></i>
-                              {t.badgeText}
-                            </span>
-                          </div>
-                          <div className="flex items-center">
-                            <img 
-                              alt={t.authorName}
-                              className="w-12 h-12 rounded-full object-cover object-top mr-4"
-                              src={t.authorImage}
+              {Array.from({ length: Math.ceil(ClientReviews.length / 2) }).map(
+                (_, slideIndex) => {
+                  const startIndex = slideIndex * 2;
+                  const group = ClientReviews.slice(startIndex, startIndex + 2);
+
+                  return (
+                    <div key={slideIndex} className="w-full shrink-0">
+                      {/* 2 Images per slide */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+                        {group.map((review) => (
+                          <div
+                            key={review.name}
+                            className="relative w-full h-56 rounded-2xl overflow-hidden shadow-lg border border-gray-200"
+                          >
+                            <Image
+                              src={review.image}
+                              alt="Client Review Image"
+                              fill
+                              className="object-contain"
+                              sizes="(max-width: 768px) 100vw,
+                             (max-width: 1200px) 50vw,
+                             50vw"
                             />
-                            <div>
-                              <div className="font-semibold text-gray-900"> 
-                                {t.authorName}
-                              </div>
-                              <div className="text-sm text-gray-600">
-                                {t.authorRole}
-                              </div>
-                              <div className="text-sm text-gray-500">
-                                {t.company}
-                              </div>
-                            </div>
                           </div>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              ))}
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+              )}
             </div>
           </div>
 
@@ -183,19 +98,24 @@ const SuccessStories = ({ testimonials }: { testimonials: Testimonial[] }) => {
             >
               <i className="ri-arrow-left-line text-xl"></i>
             </button>
+
+            {/* Dots */}
             <div className="flex space-x-2">
-              {Array.from({ length: slides }).map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrent(idx)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
-                    idx === current
-                      ? "bg-blue-600"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                ></button>
-              ))}
+              {Array.from({ length: Math.ceil(ClientReviews.length / 2) }).map(
+                (_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrent(idx)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
+                      idx === current
+                        ? "bg-blue-600"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                  ></button>
+                )
+              )}
             </div>
+
             <button
               onClick={nextSlide}
               className="w-12 h-12 bg-white border-2 border-gray-300 hover:border-blue-500 rounded-full flex items-center justify-center text-gray-600 hover:text-blue-600 transition-all duration-300 cursor-pointer"
@@ -203,6 +123,14 @@ const SuccessStories = ({ testimonials }: { testimonials: Testimonial[] }) => {
               <i className="ri-arrow-right-line text-xl"></i>
             </button>
           </div>
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/client-reviews"
+            className="px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition font-medium"
+          >
+            See More Reviews
+          </Link>
         </div>
 
         {/* Stats */}
@@ -259,3 +187,56 @@ const SuccessStories = ({ testimonials }: { testimonials: Testimonial[] }) => {
 };
 
 export default SuccessStories;
+
+{
+  /* {Array.from({ length: slides }).map((_, slideIndex) => (
+                <div key={slideIndex} className="w-full shrink-0 px-2">
+                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    {testimonials
+                      .slice(slideIndex * 3, slideIndex * 3 + 3)
+                      .map((t) => (
+                        <div
+                          key={t._id}
+                          className="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                        >
+                          <div className="flex items-center mb-4">
+                            {Array.from({ length: t.rating }).map((_, i) => (
+                              <i
+                                key={i}
+                                className="ri-star-fill text-yellow-400"
+                              ></i>
+                            ))}
+                          </div>
+                          <blockquote className="text-gray-700 leading-relaxed mb-6">
+                            &ldquo;{t.quote}&ldquo;
+                          </blockquote>
+                          <div className="mb-6">
+                            <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
+                              <i className="ri-trophy-line mr-2"></i>
+                              {t.badgeText}
+                            </span>
+                          </div>
+                          <div className="flex items-center">
+                            <img
+                              alt={t.authorName}
+                              className="w-12 h-12 rounded-full object-cover object-top mr-4"
+                              src={t.authorImage}
+                            />
+                            <div>
+                              <div className="font-semibold text-gray-900">
+                                {t.authorName}
+                              </div>
+                              <div className="text-sm text-gray-600">
+                                {t.authorRole}
+                              </div>
+                              <div className="text-sm text-gray-500">
+                                {t.company}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              ))} */
+}
