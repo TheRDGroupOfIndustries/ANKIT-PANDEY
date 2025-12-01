@@ -79,7 +79,7 @@ export default function InfiniteScrollCarousel({
           padding-block: 1rem;
           display: flex;
           flex-wrap: wrap;
-          gap: 1rem;
+          gap: 2rem;
         }
 
         .scroller[data-animated="true"] {
@@ -87,15 +87,15 @@ export default function InfiniteScrollCarousel({
           -webkit-mask: linear-gradient(
             90deg,
             transparent,
-            white 20%,
-            white 80%,
+            white 5%,
+            white 95%,
             transparent
           );
           mask: linear-gradient(
             90deg,
             transparent,
-            white 20%,
-            white 80%,
+            white 5%,
+            white 95%,
             transparent
           );
         }
