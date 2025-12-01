@@ -4,6 +4,7 @@ import "./globals.css";
 // import { Poppins, Pacifico } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 // Font imports
 // const poppins = Poppins({
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         
          <Navbar />
+          <Toaster position="top-right" /> 
         {children}
         <Footer />
       </body>
