@@ -6,13 +6,19 @@ import Services from "@/components/Services";
 import SuccessStories from "@/components/SuccessStories";
 import Traning from "@/components/Traning";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import 'remixicon/fonts/remixicon.css';
+import "remixicon/fonts/remixicon.css";
 import MyBrands from "@/components/MyBrands";
 import Memberships from "@/components/Memberships";
 import Partnerships from "@/components/Partnerships";
 import Clients from "@/components/Clients";
-import { getBlogs, getCourses, getPortfolios, getTestimonials } from "@/sanity/lib/client";
+import {
+  getBlogs,
+  getCourses,
+  getPortfolios,
+  getTestimonials,
+} from "@/sanity/lib/client";
+import ScrollToSection from "@/components/ScrollToSection";
+import { Suspense } from "react";
 
 export default async function Home() {
   const courses = await getCourses();
@@ -26,22 +32,40 @@ export default async function Home() {
 
   const posts = await getBlogs();
   // console.log(posts);
-  
+
   return (
     <div className="overflow-x-hidden">
-      <Homecomponent />
-      <About />
+      <Suspense fallback={null}>
+        <ScrollToSection />
+      </Suspense>
+      <section id="home">
+        <Homecomponent />
+      </section>
+      <section id="about">
+        <About />
+      </section>
       <MyBrands />
       <Memberships />
       <Partnerships />
       <Clients />
-      <Services />
-      <Traning courses={courses} />
+      <section id="services">
+        <Services />
+      </section>
+      <section id="training">
+        <Traning courses={courses} />
+      </section>
       <SuccessStories />
-      <Portfolio projects={projects} />
-      <Blog posts={posts} />
-      <Contact />
-      <Footer />
+
+      <section id="portfolio">
+        <Portfolio projects={projects} />
+      </section>
+
+      <section id="blog">
+        <Blog posts={posts} />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
     </div>
   );
 }

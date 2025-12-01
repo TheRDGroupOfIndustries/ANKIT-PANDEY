@@ -1,29 +1,38 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const Navbar: React.FC = () => {
   // State to manage the visibility of the mobile menu
   const [isOpen, setIsOpen] = useState(false);
+  const router= useRouter();
+  // const handleNavClick = (item: string) => {
+  //   // Close the mobile menu if open
+  //   if (isOpen) {
+  //     setIsOpen(false);
+  //   }
 
-  const handleNavClick = (item: string) => {
-    // Close the mobile menu if open
-    if (isOpen) {
-      setIsOpen(false);
-    }
+  //   const section = document.getElementById(item.toLowerCase());
+  //   if (section) {
+  //     const navHeight = 80; // Height of navbar
+  //     const targetPosition = section.offsetTop - navHeight;
 
-    const section = document.getElementById(item.toLowerCase());
-    if (section) {
-      const navHeight = 80; // Height of navbar
-      const targetPosition = section.offsetTop - navHeight;
+  //     window.scrollTo({
+  //       top: targetPosition,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
 
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+
+const handleNavClick = (item: string) => {
+  setIsOpen(false);
+
+  // Always navigate to homepage with scroll query
+  router.push(`/?scroll=${item.toLowerCase()}`);
+};
 
   const navItems = [
     "Home",
@@ -37,16 +46,16 @@ const Navbar: React.FC = () => {
 
   return (
     // Make the main div fixed to the top with a dark, slightly blurred background
-    <div className=" w-full z-20 border-b border-gray-800">
+    <div className="fixed w-full z-20 border-b border-gray-800 bg-linear-to-r from-slate-900 via-blue-900 to-indigo-900">
       <nav>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo/Brand */}
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <h1
                 className="text-2xl font-bold text-white tracking-tight cursor-pointer"
                 style={{ fontFamily: "Poppins, sans-serif" }}
-                onClick={() => handleNavClick("Home")}
+                onClick={() => router.push("/")}
               >
                 ANKIT PANDEY
               </h1>

@@ -135,7 +135,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-
+{/* 
             <div>
               <h4 className="text-lg font-semibold mb-4">Stay Updated</h4>
               <form
@@ -167,7 +167,7 @@ const Footer = () => {
                   Please enter a valid email.
                 </p>
               )}
-            </div>
+            </div> */}
           </div>
 
           {/* Services */}
