@@ -5,7 +5,7 @@ import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
 import SuccessStories from "@/components/SuccessStories";
 import Traning from "@/components/Traning";
-import Contact from "@/components/Contact";
+
 import "remixicon/fonts/remixicon.css";
 import MyBrands from "@/components/MyBrands";
 import Memberships from "@/components/Memberships";
@@ -19,6 +19,7 @@ import {
 } from "@/sanity/lib/client";
 import ScrollToSection from "@/components/ScrollToSection";
 import { Suspense } from "react";
+import Contact from "@/components/Contact";
 
 export default async function Home() {
   const courses = await getCourses();
@@ -64,7 +65,7 @@ export default async function Home() {
         <Blog posts={posts} />
       </section>
       <section id="contact">
-        <Contact />
+     <Contact/>
       </section>
     </div>
   );

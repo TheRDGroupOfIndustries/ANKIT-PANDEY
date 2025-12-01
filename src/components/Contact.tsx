@@ -1,41 +1,46 @@
 "use client";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
-    console.log("running...");
-
     e.preventDefault();
     setLoading(true);
 
     const form = e.currentTarget;
-
     const formData = new FormData(form);
-    console.log("formData ", formData);
 
     const data = Object.fromEntries(formData.entries()) as Record<
       string,
       string
     >;
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    const loadingToast = toast.loading("Sending message...");
 
-    const result = await res.json();
-    console.log("result: ", result);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    setLoading(false);
+      const result = await res.json();
+      toast.dismiss(loadingToast);
+      setLoading(false);
 
-    if (result.success) {
-      alert("Message sent successfully!");
-      form.reset();
-    } else {
-      alert("Failed to send message. Please try again.");
+      if (result.success) {
+        toast.success("Message sent successfully! ✔");
+        form.reset();
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.dismiss(loadingToast);
+      toast.error("Failed to send message. Try again later.");
+      setLoading(false);
     }
   };
   return (
@@ -211,7 +216,7 @@ const Contact = () => {
               {/* Phone */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center shrink-0">
                     <i className="ri-phone-line text-white text-xl"></i>
                   </div>
                   <div>
@@ -229,7 +234,7 @@ const Contact = () => {
               {/* Email */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-linear-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-linear-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center shrink-0">
                     <i className="ri-mail-line text-white text-xl"></i>
                   </div>
                   <div>
@@ -247,7 +252,7 @@ const Contact = () => {
               {/* Schedule */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center shrink-0">
                     <i className="ri-calendar-line text-white text-xl"></i>
                   </div>
                   <div>
