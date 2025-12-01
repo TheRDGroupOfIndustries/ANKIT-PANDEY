@@ -13,19 +13,18 @@ export default function ClientReviewsPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white">
       {/* Back Button */}
-     <div className="px-4 mb-6">
-  <Link
-    href="/"
-    className="inline-flex items-center gap-2 px-5 py-3 bg-gray-800 text-white rounded-full 
+      <div className="px-4 mb-6">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 px-5 py-3 bg-gray-800 text-white rounded-full 
                hover:bg-black transition-all text-sm sm:text-base"
-  >
-    <i className="ri-arrow-left-line text-lg sm:text-xl"></i>
-    Back to Home
-  </Link>
-</div>
-
+        >
+          <i className="ri-arrow-left-line text-lg sm:text-xl"></i>
+          Back 
+        </Link>
+      </div>
 
       {/* Fullscreen Modal */}
       {selectedImage && (
@@ -114,12 +113,7 @@ function LazyImage({ src }: { src: string }) {
       className="relative w-full h-full  rounded-xl overflow-hidden"
     >
       {isVisible ? (
-        <Image
-          src={src}
-          alt="Client Review"
-          fill
-          className="object-contain"
-        />
+        <Image src={src} alt="Client Review" fill className="object-contain" />
       ) : (
         <div className="w-full h-full animate-pulse  rounded-xl" />
       )}

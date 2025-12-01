@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Poppins, Pacifico } from "next/font/google";
+// import { Poppins, Pacifico } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // Font imports
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100","200","300","400","500","600","700","800","900"],
-  variable: "--font-poppins",
-});
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   weight: ["100","200","300","400","500","600","700","800","900"],
+//   variable: "--font-poppins",
+// });
 
-const pacifico = Pacifico({
-  subsets: ["latin"],
-  weight: ["400"], // Pacifico has only 400
-  variable: "--font-pacifico",
-});
+// const pacifico = Pacifico({
+//   subsets: ["latin"],
+//   weight: ["400"], // Pacifico has only 400
+//   variable: "--font-pacifico",
+// });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +43,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        
+         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

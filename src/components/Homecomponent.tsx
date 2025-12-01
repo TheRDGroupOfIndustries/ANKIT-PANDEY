@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Navbar from "./Navbar";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,9 +8,7 @@ const Homecomponent = () => {
 
   return (
     <div id="home">
-      <section className="relative min-h-screen pb-10 flex flex-col overflow-hidden bg-linear-to-br from-slate-900 via-blue-900 to-indigo-900">
-        <Navbar />
-
+      <section className="relative min-h-screen mt-10 py-10 flex flex-col overflow-hidden bg-linear-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Background shapes */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>

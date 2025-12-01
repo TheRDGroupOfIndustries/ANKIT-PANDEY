@@ -1,7 +1,43 @@
 "use client";
-
+import { useState } from "react";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
+  const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
+    console.log("running...");
+
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.currentTarget;
+
+    const formData = new FormData(form);
+    console.log("formData ", formData);
+
+    const data = Object.fromEntries(formData.entries()) as Record<
+      string,
+      string
+    >;
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+    console.log("result: ", result);
+
+    setLoading(false);
+
+    if (result.success) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      alert("Failed to send message. Please try again.");
+    }
+  };
   return (
     <div id="contact" className="bg-gray-50 pt-10">
       <div className="m-8 flex justify-center items-center">
@@ -34,7 +70,11 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Send Me a Message
               </h3>
-              <form id="contact-form" className="space-y-6">
+              <form
+                id="contact-form"
+                onSubmit={submitForm}
+                className="space-y-6"
+              >
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -109,15 +149,19 @@ const Contact = () => {
                     className="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                   >
                     <option value="">Select a service</option>
-                    <option value="digital_strategy">
+                    <option value="Digital Marketing Strategy">
                       Digital Marketing Strategy
                     </option>
-                    <option value="social_media">Social Media Growth</option>
-                    <option value="seo">SEO Optimization</option>
-                    <option value="paid_ads">Paid Ad Campaigns</option>
-                    <option value="training_1on1">1-on-1 Training</option>
-                    <option value="training_group">Group Training</option>
-                    <option value="consultation">General Consultation</option>
+                    <option value="Social Media Growth">
+                      Social Media Growth
+                    </option>
+                    <option value="SEO Optimization">SEO Optimization</option>
+                    <option value="Paid Ad Campaigns">Paid Ad Campaigns</option>
+                    <option value="1-on-1 Training">1-on-1 Training</option>
+                    <option value="Group Training">Group Training</option>
+                    <option value="General Consultation">
+                      General Consultation
+                    </option>
                   </select>
                 </div>
 
@@ -130,11 +174,11 @@ const Contact = () => {
                     className="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                   >
                     <option value="">Select budget range</option>
-                    <option value="under_1k">Under $1,000</option>
-                    <option value="1k_5k">$1,000 - $5,000</option>
-                    <option value="5k_10k">$5,000 - $10,000</option>
-                    <option value="10k_25k">$10,000 - $25,000</option>
-                    <option value="25k_plus">$25,000+</option>
+                    <option value="Under $1,000">Under $1,000</option>
+                    <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                    <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+                    <option value="$25,000+">$25,000+</option>
                   </select>
                 </div>
 
@@ -154,9 +198,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="w-full bg-linear-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none whitespace-nowrap cursor-pointer"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
