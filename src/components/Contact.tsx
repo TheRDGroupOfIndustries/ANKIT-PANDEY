@@ -223,10 +223,10 @@ const Contact = () => {
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">
                       Phone
                     </h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-gray-600">+91 8303777132</p>
+                    {/* <p className="text-sm text-gray-500 mt-1">
                       Available Mon-Fri, 9AM-6PM EST
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>
@@ -241,7 +241,7 @@ const Contact = () => {
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">
                       Email
                     </h4>
-                    <p className="text-gray-600">hello@ankitpandey.com</p>
+                    <p className="text-gray-600">pandeyankitvns@gmail.com</p>
                     <p className="text-sm text-gray-500 mt-1">
                       I'll respond within 24 hours
                     </p>
