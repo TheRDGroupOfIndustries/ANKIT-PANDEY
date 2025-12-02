@@ -7,7 +7,7 @@ import React, { useState } from "react";
 const Navbar: React.FC = () => {
   // State to manage the visibility of the mobile menu
   const [isOpen, setIsOpen] = useState(false);
-  const router= useRouter();
+  const router = useRouter();
   // const handleNavClick = (item: string) => {
   //   // Close the mobile menu if open
   //   if (isOpen) {
@@ -26,13 +26,22 @@ const Navbar: React.FC = () => {
   //   }
   // };
 
+  const handleNavClick = (item: string) => {
+    setIsOpen(false);
 
-const handleNavClick = (item: string) => {
-  setIsOpen(false);
+    const lower = item.toLowerCase();
 
-  // Always navigate to homepage with scroll query
-  router.push(`/?scroll=${item.toLowerCase()}`);
-};
+    if (lower === "blog") {
+      router.push("/blog");
+      return;
+    }
+
+    if (lower === "portfolio") {
+      router.push("/portfolio");
+      return;
+    }
+    router.push(`/?scroll=${item.toLowerCase()}`);
+  };
 
   const navItems = [
     "Home",
