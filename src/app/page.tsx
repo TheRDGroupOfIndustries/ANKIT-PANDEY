@@ -65,7 +65,7 @@ export default async function Home() {
         <Blog posts={posts} />
       </section>
       <section id="contact">
-     <Contact/>
+        <Contact />
       </section>
     </div>
   );
