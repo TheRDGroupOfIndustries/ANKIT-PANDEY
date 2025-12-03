@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
 
 const Navbar: React.FC = () => {
   // State to manage the visibility of the mobile menu
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
   // const handleNavClick = (item: string) => {
   //   // Close the mobile menu if open
   //   if (isOpen) {
@@ -40,7 +41,27 @@ const Navbar: React.FC = () => {
       router.push("/portfolio");
       return;
     }
-    router.push(`/?scroll=${item.toLowerCase()}`);
+    // router.push(`/?scroll=${item.toLowerCase()}`);
+
+
+        const currentScrollParam = searchParams.get("scroll");
+
+        if (currentScrollParam === lower) {
+            const section = document.getElementById(lower);
+            if (section) {
+                const navHeight = 80; 
+                const targetPosition = section.offsetTop - navHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth",
+                });
+            }
+            return; // EXIT the function after manual scroll
+        }
+
+        // 3. If the scroll target is NEW, push the new route state
+        router.push(`/?scroll=${lower}`);
   };
 
   const navItems = [

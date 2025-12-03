@@ -155,7 +155,7 @@ const Traning = ({ courses }: { courses: Course[] }) => {
                         {course.duration}
                       </div>
                     </div>
-                    <button
+                    {/* <button
                       className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 whitespace-nowrap cursor-pointer ${
                         course.popular
                           ? "bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white"
@@ -163,7 +163,7 @@ const Traning = ({ courses }: { courses: Course[] }) => {
                       }`}
                     >
                       Learn More
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -195,15 +195,16 @@ const Traning = ({ courses }: { courses: Course[] }) => {
                 >
                   Free Course Consultation
                 </button>
-                <Link
-                  href="https://skytouch-inky.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => {
+                    const section = document.getElementById("training");
+                    section?.scrollIntoView({ behavior: "smooth" });
+                  }}
                   // Reduced text and padding on mobile (text-base, px-6, py-3)
                   className="border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 whitespace-nowrap cursor-pointer"
                 >
                   View All Courses
-                </Link>
+                </button>
               </div>
             </div>
           </div>
