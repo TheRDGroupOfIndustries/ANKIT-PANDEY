@@ -45,7 +45,7 @@ const Contact = () => {
   };
   return (
     <div id="contact" className="bg-gray-50 pt-10">
-      <div className="m-8 flex justify-center items-center">
+      <div className="flex justify-center items-center">
         <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           Contact Us
         </h1>
@@ -57,7 +57,7 @@ const Contact = () => {
             {/* <div className="inline-flex items-center px-4 py-2 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium mb-6">
             <i className="ri-mail-line mr-2"></i>Get In Touch
           </div> */}
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-6">
               Need Help? <br /> Let's Get Your Business On{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-blue-500">
                 Growth Track.

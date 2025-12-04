@@ -21,19 +21,19 @@ export default function RoiImageCarousel() {
   }, []);
 
   return (
-    <div className="w-full my-10 ">
-      {/* --------- ROI TEXT HEADER (styled like What I Do section) --------- */}
-      <div className="flex justify-center items-center mb-6">
+    <div className="w-full py-10 bg-gray-100">
+      {/* --------- ROI TEXT HEADER  --------- */}
+      <div className="flex justify-center items-center mb-2">
         <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           ROI Excellence
         </h1>
       </div>
 
-      <section className="bg-white">
+      <section className="">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Sub-header */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-6">
               Maximize Your Revenue with
               <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
                 {" "}

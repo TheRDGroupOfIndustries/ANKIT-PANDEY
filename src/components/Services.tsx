@@ -84,7 +84,7 @@ const Services = () => {
 
   return (
     <div id="services" className=" py-10">
-      <div className=" flex justify-center items-center mb-6">
+      <div className=" flex justify-center items-center mb-2">
         <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           What I Do
         </h1>
@@ -93,7 +93,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-6">
               Comprehensive Digital Marketing{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
                 Solutions

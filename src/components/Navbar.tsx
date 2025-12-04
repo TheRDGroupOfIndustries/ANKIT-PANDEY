@@ -74,9 +74,9 @@ const Navbar: React.FC = () => {
     "Services",
     "Training",
     "Portfolio",
+    "ROI",
     "Blog",
     "Contact",
-    "ROI"
   ];
 
   return (
@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
 
             {/* Desktop Navigation Links (Hidden on mobile) */}
             <div className="hidden lg:block">
-              <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-3">
                 {navItems.map((item) => (
                   <button
                     key={item}

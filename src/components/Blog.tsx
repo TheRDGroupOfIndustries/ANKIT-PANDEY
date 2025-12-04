@@ -31,7 +31,7 @@ const Blog = ({ posts }: { posts: BlogPost[] }) => {
       : posts.filter((post) => post.category === selectedCategory);
 
   return (
-    <div id="blog" className="bg-white py-10">
+    <div id="blog" className="bg-white py-8">
       <div className=" flex justify-center items-center">
         <h1 className="text-4xl md:text-5xl h-14 font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           My Blogs
@@ -40,8 +40,8 @@ const Blog = ({ posts }: { posts: BlogPost[] }) => {
       <section className=" bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-6">
+            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-4">
               Stay Updated With{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-500">
                 The Industry Trends & Updates
@@ -54,7 +54,7 @@ const Blog = ({ posts }: { posts: BlogPost[] }) => {
           </div>
 
           {/* Categories */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
             {categories.map((cat) => (
               <button
                 key={cat}
