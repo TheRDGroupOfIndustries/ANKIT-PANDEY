@@ -43,7 +43,7 @@ export default function BlogPage({ posts }: { posts: BlogPost[] }) {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           {/* Categories */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
             {categories.map((cat) => (
               <button
                 key={cat}

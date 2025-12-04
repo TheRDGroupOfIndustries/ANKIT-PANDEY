@@ -44,7 +44,7 @@ const PortfolioPage = ({ projects }: { projects: Project[] }) => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-6">
               Proven Results Across{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-500">
                 Multiple Industries

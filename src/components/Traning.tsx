@@ -79,11 +79,11 @@ const Traning = ({ courses }: { courses: Course[] }) => {
         </h1>
       </div>
 
-      <section className="py-10 bg-gray-50">
+      <section className=" bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-4">
               Master Digital Marketing with{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-red-500">
                 Expert-Led Courses

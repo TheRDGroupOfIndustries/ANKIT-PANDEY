@@ -14,7 +14,7 @@ export default function RoiPage() {
   const [lightbox, setLightbox] = useState<null | string>(null);
 
   return (
-    <div className="min-h-screen pt-28 px-6 md:px-12">
+    <div className="min-h-screen pt-28 px-6 md:px-12 ">
 
       {/* ------------ TOP TEXT ------------- */}
       <div className="flex justify-center items-center mb-6">
