@@ -41,6 +41,10 @@ const Navbar: React.FC = () => {
       router.push("/portfolio");
       return;
     }
+    if (lower === "roi") {
+      router.push("/roi");
+      return;
+    }
     // router.push(`/?scroll=${item.toLowerCase()}`);
 
 
@@ -72,6 +76,7 @@ const Navbar: React.FC = () => {
     "Portfolio",
     "Blog",
     "Contact",
+    "ROI"
   ];
 
   return (
@@ -93,7 +98,7 @@ const Navbar: React.FC = () => {
 
             {/* Desktop Navigation Links (Hidden on mobile) */}
             <div className="hidden lg:block">
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-6">
                 {navItems.map((item) => (
                   <button
                     key={item}

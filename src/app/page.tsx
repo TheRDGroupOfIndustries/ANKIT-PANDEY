@@ -20,6 +20,7 @@ import {
 import ScrollToSection from "@/components/ScrollToSection";
 import { Suspense } from "react";
 import Contact from "@/components/Contact";
+import RoiImageCarousel from "@/components/RoiImageCarousel";
 
 export default async function Home() {
   const courses = await getCourses();
@@ -60,6 +61,7 @@ export default async function Home() {
       <section id="portfolio">
         <Portfolio projects={projects} />
       </section>
+      <RoiImageCarousel/>
 
       <section id="blog">
         <Blog posts={posts} />
