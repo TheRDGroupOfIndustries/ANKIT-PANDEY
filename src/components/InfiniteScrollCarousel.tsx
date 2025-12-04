@@ -82,23 +82,7 @@ export default function InfiniteScrollCarousel({
           gap: 2rem;
         }
 
-        .scroller[data-animated="true"] {
-          overflow: hidden;
-          -webkit-mask: linear-gradient(
-            90deg,
-            transparent,
-            white 5%,
-            white 95%,
-            transparent
-          );
-          mask: linear-gradient(
-            90deg,
-            transparent,
-            white 5%,
-            white 95%,
-            transparent
-          );
-        }
+        
 
         .scroller[data-animated="true"] .scroller__inner {
           width: max-content;
@@ -191,3 +175,23 @@ export default function InfiniteScrollCarousel({
     </div>
   );
 }
+
+
+
+// .scroller[data-animated="true"] {
+//           overflow: hidden;
+//           -webkit-mask: linear-gradient(
+//             90deg,
+//             transparent,
+//             white 5%,
+//             white 95%,
+//             transparent
+//           );
+//           mask: linear-gradient(
+//             90deg,
+//             transparent,
+//             white 5%,
+//             white 95%,
+//             transparent
+//           );
+//         }

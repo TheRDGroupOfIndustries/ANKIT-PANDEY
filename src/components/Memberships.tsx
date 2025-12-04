@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 const brands = [
-  { image: "/memberships/bni.jpg", name: "BNI" },
+  // { image: "/memberships/bni.jpg", name: "BNI" },
   { image: "/memberships/bni2.jpg", name: "BNI 2" },
   { image: "/memberships/jbf.jpg", name: "JBF" },
   { image: "/memberships/jsk.jpg", name: "JSK" },
@@ -27,7 +27,7 @@ const Memberships = () => {
             grid-cols-2 
             sm:grid-cols-3 
             md:grid-cols-4 
-            lg:grid-cols-5 
+            lg:grid-cols-4 
             gap-8 sm:gap-16
             place-items-center
           "
@@ -37,9 +37,9 @@ const Memberships = () => {
               <Image
                 src={brand.image}
                 alt={brand.name}
-                width={200}
-                height={200}
-                className="shadow-md rounded-xl w-32 sm:w-40 md:w-48 object-cover"
+                width={250}
+                height={250}
+                className="shadow-md rounded-xl w-32 sm:w-40 md:w-56 object-cover"
               />
             </div>
           ))}
