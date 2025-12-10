@@ -89,7 +89,7 @@ const SuccessStories = () => {
               )} */}
               {ClientReviews.map((review, index) => (
                 <div key={index} className="w-full shrink-0 px-4">
-                  <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                  <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
                     <Image
                       src={review.image}
                       alt={review.name}

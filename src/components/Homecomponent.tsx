@@ -43,12 +43,7 @@ const Homecomponent = () => {
       color: "from-purple-400 to-pink-400",
     },
   ];
-  const rotatingTexts = [
-    "Digital Success",
-    "Digital Growth",
-    "Digital Breakthrough",
-    "Digital Marketing",
-  ];
+  const rotatingTexts = ["Success", "Growth", "Breakthrough", "Marketing"];
 
   return (
     <div id="home">
@@ -81,16 +76,19 @@ const Homecomponent = () => {
                   {/* <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 animate-pulse">
                     Digital Success
                   </span> */}
-                  <motion.span
+                  <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 whitespace-nowrap">
+                    Digital{" "}<motion.span
                     key={index}
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.6, ease: "easeInOut" }}
-                    className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 whitespace-nowrap"
+                    
                   >
                     {rotatingTexts[index]}
                   </motion.span>
+                  </span>
+                  
                 </h1>
                 <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto">
                   Master proven digital marketing strategies that have generated

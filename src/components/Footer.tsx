@@ -71,12 +71,12 @@ const Footer = () => {
     "Success Stories",
   ];
 
-  const stats = [
-    { value: "10000",suffix:"+", label: "Students Trained", color: "text-blue-400" },
-    { value: "200",suffix:"+", label: "Brands Grown", color: "text-green-400" },
-    { value: "95",suffix:"%", label: "Success Rate", color: "text-orange-400" },
-    { value: "5",suffix:"+", label: "Years Experience", color: "text-purple-400" },
-  ];
+  // const stats = [
+  //   { value: "10000",suffix:"+", label: "Students Trained", color: "text-blue-400" },
+  //   { value: "200",suffix:"+", label: "Brands Grown", color: "text-green-400" },
+  //   { value: "95",suffix:"%", label: "Success Rate", color: "text-orange-400" },
+  //   { value: "5",suffix:"+", label: "Years Experience", color: "text-purple-400" },
+  // ];
 
   const footerLinks = [
     { text: "Privacy Policy", href: "/privacy" },
@@ -213,7 +213,7 @@ const Footer = () => {
         </div>
 
         {/* Stats */}
-        <section className="bg-gray-900 ">
+        {/* <section className="bg-gray-900 ">
           <div className="max-w-7xl mx-auto lg:px-8">
             <div className="pt-12 border-t border-gray-800">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -223,7 +223,7 @@ const Footer = () => {
                     className="transform hover:scale-105 transition-transform duration-300 p-4 rounded-xl"
                   >
                     <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                      {/* {stat.value} */}
+                      
                        <CountUp end={stat.value} suffix={stat.suffix} />
                     </div>
                     <div className="text-gray-400 text-sm sm:text-base">
@@ -234,7 +234,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
 
       {/* Bottom Footer */}

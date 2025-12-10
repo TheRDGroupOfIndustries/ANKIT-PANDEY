@@ -65,8 +65,8 @@ const Contact = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              While you wait, your competitor is already working! Don&apos;t delay
-              schedule you call now.
+              While you wait, your competitor is already working! Don&apos;t
+              delay schedule you call now.
             </p>
           </div>
 
@@ -242,7 +242,9 @@ const Contact = () => {
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">
                       Email
                     </h4>
-                    <p className="text-gray-600">annkitpandeygrowth@gmail.com</p>
+                    <p className="text-gray-600">
+                      annkitpandeygrowth@gmail.com
+                    </p>
                     <p className="text-sm text-gray-500 mt-1">
                       I&apos;ll respond within 24 hours
                     </p>
@@ -277,25 +279,33 @@ const Contact = () => {
                 </h4>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://linkedin.com/in/ankitpandey"
                     className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer"
                   >
                     <i className="ri-linkedin-fill text-xl"></i>
                   </a>
                   <a
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://instagram.com/ankitpandey"
                     className="w-12 h-12 bg-pink-600 hover:bg-pink-700 rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer"
                   >
                     <i className="ri-instagram-fill text-xl"></i>
                   </a>
                   <a
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://youtube.com/@ankitpandey"
                     className="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer"
                   >
                     <i className="ri-youtube-fill text-xl"></i>
                   </a>
                   <a
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://twitter.com/ankitpandey"
                     className="w-12 h-12 bg-blue-400 hover:bg-blue-500 rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer"
                   >
                     <i className="ri-twitter-fill text-xl"></i>
