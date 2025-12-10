@@ -165,8 +165,8 @@ export default function InfiniteScrollCarousel({
                 src={partner.image}
                 className="shadow-md rounded-xl"
                 alt={partner.name}
-                width={150}
-                height={150}
+                width={160}
+                height={160}
               />
             ))}
           </div>

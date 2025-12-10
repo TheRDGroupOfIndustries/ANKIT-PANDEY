@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import CountUp from "./CountUp";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
-  const [subscribeStatus, setSubscribeStatus] = useState("");
 
   const handleNavClick = (item: string) => {
     const section = document.getElementById(
@@ -18,18 +18,6 @@ const Footer = () => {
         top: targetPosition,
         behavior: "smooth",
       });
-    }
-  };
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email && email.includes("@")) {
-      setSubscribeStatus("success");
-      setEmail("");
-      setTimeout(() => setSubscribeStatus(""), 3000);
-    } else {
-      setSubscribeStatus("error");
-      setTimeout(() => setSubscribeStatus(""), 3000);
     }
   };
 
@@ -84,10 +72,10 @@ const Footer = () => {
   ];
 
   const stats = [
-    { value: "10,000+", label: "Students Trained", color: "text-blue-400" },
-    { value: "200+", label: "Brands Grown", color: "text-green-400" },
-    { value: "95%", label: "Success Rate", color: "text-orange-400" },
-    { value: "5+", label: "Years Experience", color: "text-purple-400" },
+    { value: "10000",suffix:"+", label: "Students Trained", color: "text-blue-400" },
+    { value: "200",suffix:"+", label: "Brands Grown", color: "text-green-400" },
+    { value: "95",suffix:"%", label: "Success Rate", color: "text-orange-400" },
+    { value: "5",suffix:"+", label: "Years Experience", color: "text-purple-400" },
   ];
 
   const footerLinks = [
@@ -235,7 +223,8 @@ const Footer = () => {
                     className="transform hover:scale-105 transition-transform duration-300 p-4 rounded-xl"
                   >
                     <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                      {stat.value}
+                      {/* {stat.value} */}
+                       <CountUp end={stat.value} suffix={stat.suffix} />
                     </div>
                     <div className="text-gray-400 text-sm sm:text-base">
                       {stat.label}

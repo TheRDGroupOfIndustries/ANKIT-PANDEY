@@ -138,9 +138,15 @@ const Services = () => {
                       ))}
                     </ul>
                   </div>
-                  {/* <button className="w-full mt-6 bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-600 py-3 rounded-lg font-medium transition-all duration-300 border border-gray-200 hover:border-blue-200 whitespace-nowrap cursor-pointer">
-                    Learn More
-                  </button> */}
+                  <a
+                    href="https://calendly.com/annkitpandey/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="w-full mt-6 bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-600 py-3 rounded-lg font-medium transition-all duration-300 border border-gray-200 hover:border-blue-200 whitespace-nowrap cursor-pointer">
+                      Learn More
+                    </button>
+                  </a>
                 </div>
               </div>
             ))}

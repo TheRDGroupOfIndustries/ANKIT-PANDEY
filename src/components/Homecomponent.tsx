@@ -1,10 +1,54 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { motion, useAnimation } from "motion/react";
+import CountUp from "./CountUp";
 const Homecomponent = () => {
   const heroImage = "/images/profile.jpg";
+
+  const [index, setIndex] = useState(0);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % rotatingTexts.length);
+    }, 2500); // change every 2.5s
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const stats = [
+    {
+      number: 1000,
+      suffix: "+",
+      label: "Students Trained",
+      color: "from-cyan-400 to-blue-400",
+    },
+    {
+      number: 50,
+      suffix: "M+",
+      label: "Revenue Generated",
+      color: "from-orange-400 to-red-400",
+    },
+    {
+      number: 200,
+      suffix: "+",
+      label: "Brands Grown",
+      color: "from-green-400 to-emerald-400",
+    },
+    {
+      number: 98,
+      suffix: "%",
+      label: "Success Rate",
+      color: "from-purple-400 to-pink-400",
+    },
+  ];
+  const rotatingTexts = [
+    "Digital Success",
+    "Digital Growth",
+    "Digital Breakthrough",
+    "Digital Marketing",
+  ];
 
   return (
     <div id="home">
@@ -34,9 +78,19 @@ const Homecomponent = () => {
                 <h1 className="text-4xl lg:text-7xl font-black leading-tight text-white">
                   Transform Your
                   <br />
-                  <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 animate-pulse">
+                  {/* <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 animate-pulse">
                     Digital Success
-                  </span>
+                  </span> */}
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 whitespace-nowrap"
+                  >
+                    {rotatingTexts[index]}
+                  </motion.span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto">
                   Master proven digital marketing strategies that have generated
@@ -90,28 +144,7 @@ const Homecomponent = () => {
           {/* Stats */}
           <div className="mt-16">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {[
-                {
-                  value: "1000+",
-                  label: "Students Trained",
-                  color: "from-cyan-400 to-blue-400",
-                },
-                {
-                  value: "$50M+",
-                  label: "Revenue Generated",
-                  color: "from-orange-400 to-red-400",
-                },
-                {
-                  value: "200+",
-                  label: "Brands Grown",
-                  color: "from-green-400 to-emerald-400",
-                },
-                {
-                  value: "98%",
-                  label: "Success Rate",
-                  color: "from-purple-400 to-pink-400",
-                },
-              ].map((stat) => (
+              {stats.map((stat) => (
                 <div
                   key={stat.label}
                   className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-4 text-center hover:bg-white/10 transition-all duration-300 hover:scale-105"
@@ -119,7 +152,7 @@ const Homecomponent = () => {
                   <div
                     className={`text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-linear-to-r ${stat.color} mb-2`}
                   >
-                    {stat.value}
+                    <CountUp end={stat.number} suffix={stat.suffix || ""} />
                   </div>
                   {/* Changed font size for label to text-sm on smaller screens */}
                   <div className="text-slate-400 font-medium text-sm md:text-base">

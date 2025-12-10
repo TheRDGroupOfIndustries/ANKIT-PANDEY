@@ -59,10 +59,6 @@ const partners = [
     image: "/partners/IMG-20251117-WA0046.jpg",
     name: "IMG-20251117-WA0046",
   },
-  {
-    image: "/partners/WhatsApp Image 2025-11-17 at 20.04.45_b1dbeee1.jpg",
-    name: "WhatsApp Image 2025-11-17 at 20.04.45_b1dbeee1",
-  },
 ];
 
 const Partnerships = () => {
