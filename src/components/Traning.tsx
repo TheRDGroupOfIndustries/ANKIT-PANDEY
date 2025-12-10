@@ -115,10 +115,7 @@ const Traning = ({ courses }: { courses: Course[] }) => {
                         setSelectedCourse(course?.title);
                         setOpenModal(true);
                       }}
-                      className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 whitespace-nowrap cursor-pointer ${
-                        course.popular
-                          ? "bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white"
-                          : "bg-gray-100 hover:bg-blue-100 text-gray-700 hover:text-blue-600"
+                      className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 whitespace-nowrap cursor-pointer bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white
                       }`}
                     >
                       Buy
