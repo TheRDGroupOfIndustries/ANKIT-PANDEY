@@ -47,7 +47,8 @@ const Contact = () => {
     <div id="contact" className="bg-gray-50 pt-10">
       <div className="flex justify-center items-center">
         <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-          Contact Us
+          {/* Contact Us */}
+          Need Help
         </h1>
       </div>
       <section className=" bg-gray-50 pb-10 ">
@@ -58,14 +59,14 @@ const Contact = () => {
             <i className="ri-mail-line mr-2"></i>Get In Touch
           </div> */}
             <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-6">
-              Need Help? <br /> Let's Get Your Business On{" "}
+              Let&apos;s Get Your Business On{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-blue-500">
                 Growth Track.
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              While you wait, your competitor is already working! Don't delay
-              schedule you call now.
+              While you wait, your competitor is already working! Don&apos;t delay
+              schedule you call now.
             </p>
           </div>
 
@@ -241,9 +242,9 @@ const Contact = () => {
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">
                       Email
                     </h4>
-                    <p className="text-gray-600">pandeyankitvns@gmail.com</p>
+                    <p className="text-gray-600">annkitpandeygrowth@gmail.com</p>
                     <p className="text-sm text-gray-500 mt-1">
-                      I'll respond within 24 hours
+                      I&apos;ll respond within 24 hours
                     </p>
                   </div>
                 </div>

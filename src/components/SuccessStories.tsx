@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import CountUp from "./CountUp";
 
 export interface Testimonial {
   _id: string;
@@ -14,15 +15,14 @@ export interface Testimonial {
   company: string;
   authorImage: string;
 }
- const ClientReviews = Array.from({ length: 20 }).map((_, i) => ({
-    image: `/client-review/client_image (${i + 1}).jpeg`,
-    name: `Client ${i + 1}`,
-  }));
+const ClientReviews = Array.from({ length: 20 }).map((_, i) => ({
+  image: `/client-review/client_image (${i + 1}).jpeg`,
+  name: `Client ${i + 1}`,
+}));
 const SuccessStories = () => {
   const [current, setCurrent] = useState(0);
 
-  const slides = Math.ceil(ClientReviews.length / 2); // FIXED (2 images per slide)
-
+  const slides = ClientReviews.length;
   const prevSlide = () => {
     setCurrent(current === 0 ? slides - 1 : current - 1);
   };
@@ -57,14 +57,14 @@ const SuccessStories = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
-              {Array.from({ length: Math.ceil(ClientReviews.length / 2) }).map(
+              {/* {Array.from({ length: Math.ceil(ClientReviews.length / 2) }).map(
                 (_, slideIndex) => {
                   const startIndex = slideIndex * 2;
                   const group = ClientReviews.slice(startIndex, startIndex + 2);
 
                   return (
                     <div key={slideIndex} className="w-full shrink-0">
-                      {/* 2 Images per slide */}
+                   
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
                         {group.map((review) => (
                           <div
@@ -86,7 +86,19 @@ const SuccessStories = () => {
                     </div>
                   );
                 }
-              )}
+              )} */}
+              {ClientReviews.map((review, index) => (
+                <div key={index} className="w-full shrink-0 px-4">
+                  <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <Image
+                      src={review.image}
+                      alt={review.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -141,7 +153,7 @@ const SuccessStories = () => {
                 {/* 1️⃣ Students Trained */}
                 <div className="p-4 transform hover:scale-105 transition-transform duration-300">
                   <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 mb-2">
-                    10,000+
+                    <CountUp end={10000} suffix="+" />
                   </div>
                   <div className="text-gray-700 text-sm sm:text-base font-medium">
                     Students Trained
@@ -151,7 +163,7 @@ const SuccessStories = () => {
                 {/* 2️⃣ Brands Grown */}
                 <div className="p-4 transform hover:scale-105 transition-transform duration-300">
                   <div className="text-3xl sm:text-4xl font-extrabold text-green-600 mb-2">
-                    200+
+                    <CountUp end={200} suffix="+" />
                   </div>
                   <div className="text-gray-700 text-sm sm:text-base font-medium">
                     Brands Grown
@@ -161,7 +173,7 @@ const SuccessStories = () => {
                 {/* 3️⃣ Success Rate */}
                 <div className="p-4 transform hover:scale-105 transition-transform duration-300">
                   <div className="text-3xl sm:text-4xl font-extrabold text-orange-600 mb-2">
-                    95%
+                    <CountUp end={200} suffix="%" />
                   </div>
                   <div className="text-gray-700 text-sm sm:text-base font-medium">
                     Success Rate
@@ -171,7 +183,7 @@ const SuccessStories = () => {
                 {/* 4️⃣ Years Experience */}
                 <div className="p-4 transform hover:scale-105 transition-transform duration-300">
                   <div className="text-3xl sm:text-4xl font-extrabold text-purple-600 mb-2">
-                    5+
+                    <CountUp end={5} suffix="+" />
                   </div>
                   <div className="text-gray-700 text-sm sm:text-base font-medium">
                     Years Experience
