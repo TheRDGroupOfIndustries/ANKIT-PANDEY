@@ -265,10 +265,10 @@ const Contact = () => {
                     <p className="text-gray-600">
                       Book a free 30-minute consultation
                     </p>
-                    onClick={() =>
+                    <button onClick={() =>
     window.open("https://calendly.com/annkitpandey/30min", "_blank")
   }
-                    <button className="text-purple-600 hover:text-purple-700 font-medium text-sm mt-2 cursor-pointer">
+                      className="text-purple-600 hover:text-purple-700 font-medium text-sm mt-2 cursor-pointer">
                       View Available Times →
                     </button>
                   </div>
