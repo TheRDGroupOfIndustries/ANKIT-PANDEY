@@ -243,7 +243,7 @@ const Contact = () => {
                       Email
                     </h4>
                     <p className="text-gray-600">
-                      annkitpandeygrowth@gmail.com
+                      Growth@annkitpandey.com
                     </p>
                     <p className="text-sm text-gray-500 mt-1">
                       I&apos;ll respond within 24 hours
