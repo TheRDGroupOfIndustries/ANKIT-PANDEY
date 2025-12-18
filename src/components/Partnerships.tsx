@@ -73,10 +73,10 @@ const Partnerships = () => {
 
       {/* Header */}
       <div className="text-center">
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-         All Leading Radio, Cinema & Newspapers In Varanasi & Near By.
-        </p>
-      </div>
+  <p className="text-xl font-semibold text-gray-600 max-w-3xl mx-auto">
+    All Leading Radio, Cinema & Newspapers In Varanasi & Near By.
+  </p>
+</div>
     </div>
   );
 };
