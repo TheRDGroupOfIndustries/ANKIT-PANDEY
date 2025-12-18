@@ -56,7 +56,7 @@ const Services = () => {
     // },
     {
       icon: "ri-user-line",
-      title: "1-on-1 Training",
+      title: "1-on-1 Consultation",
       description:
         "Personalized coaching sessions designed to accelerate your digital marketing skills.",
       points: [
