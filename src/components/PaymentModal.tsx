@@ -88,10 +88,10 @@ const PaymentModal = ({ isOpen, onClose, courseTitle }: Props) => {
         {/* Bank Details */}
         <div className="space-y-2 bg-gray-100 p-4 rounded-xl shadow-md border-gray-100 border text-sm">
           {[
-            { label: "Bank Name", value: "HDFC Bank" },
+            { label: "Bank Name", value: "Punjab National Bank (PNB)" },
             { label: "Account Holder", value: "Ankit Pandey" },
-            { label: "Account Number", value: "12345678901234" },
-            { label: "IFSC Code", value: "HDFC0001234" },
+            { label: "Account Number", value: "4972002100005820" },
+            { label: "IFSC Code", value: "PUNB0497200" },
           ].map((item) => (
             <p key={item.label} className="flex justify-between">
               <span>
@@ -108,12 +108,12 @@ const PaymentModal = ({ isOpen, onClose, courseTitle }: Props) => {
         {/* QR CODE */}
         <div className="mt-4 text-center">
           <h3 className="text-sm font-semibold mb-2">Scan & Pay</h3>
-          <div className="w-36 h-36 mx-auto border border-gray-100  rounded-xl overflow-hidden bg-white shadow-md">
+          <div className="w-36 h-36 mx-auto border border-gray-100  rounded-xl overflow-hidden bg-white shadow-md text-center flex items-center justify-center">
             <Image
-              src="/images/qr_code.png"
+              src="/images/ankit_qr.png"
               alt="QR Code"
-              width={140}
-              height={140}
+              width={125}
+              height={125}
               className="object-contain"
             />
           </div>
@@ -160,11 +160,10 @@ const PaymentModal = ({ isOpen, onClose, courseTitle }: Props) => {
           onClick={handleSubmit}
           disabled={loading || !isFormValid}
           className={`w-full mt-5 py-3 rounded-xl text-white text-sm font-semibold transition 
-    ${
-      !isFormValid || loading
-        ? "bg-blue-300 cursor-not-allowed"
-        : "bg-blue-600 hover:bg-blue-700"
-    }`}
+    ${!isFormValid || loading
+              ? "bg-blue-300 cursor-not-allowed"
+              : "bg-blue-600 hover:bg-blue-700"
+            }`}
         >
           {loading ? "Submitting..." : "Submit Payment"}
         </button>

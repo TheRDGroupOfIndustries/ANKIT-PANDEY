@@ -6,7 +6,6 @@ import Services from "@/components/Services";
 import SuccessStories from "@/components/SuccessStories";
 import Traning from "@/components/Traning";
 
-import "remixicon/fonts/remixicon.css";
 import MyBrands from "@/components/MyBrands";
 import Memberships from "@/components/Memberships";
 import Partnerships from "@/components/Partnerships";
@@ -61,7 +60,7 @@ export default async function Home() {
       <section id="portfolio">
         <Portfolio projects={projects} />
       </section>
-      <RoiImageCarousel/>
+      <RoiImageCarousel />
 
       <section id="blog">
         <Blog posts={posts} />

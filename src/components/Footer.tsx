@@ -24,23 +24,33 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: "ri-linkedin-fill",
-      url: "https://linkedin.com/in/ankitpandey",
+      url: "https://www.linkedin.com/in/annkitpandey/",
       color: "bg-blue-600 hover:bg-blue-700",
     },
     {
       icon: "ri-instagram-fill",
-      url: "https://instagram.com/ankitpandey",
+      url: "https://www.instagram.com/annkitpandey",
       color: "bg-pink-600 hover:bg-pink-700",
     },
     {
       icon: "ri-youtube-fill",
-      url: "https://youtube.com/@ankitpandey",
+      url: "https://youtube.com/@annkitpandey",
       color: "bg-red-600 hover:bg-red-700",
     },
     {
       icon: "ri-twitter-fill",
-      url: "https://twitter.com/ankitpandey",
+      url: "https://x.com/annkitpandey",
       color: "bg-blue-400 hover:bg-blue-500",
+    },
+    {
+      icon: "ri-facebook-fill",
+      url: "https://www.facebook.com/annkitpandey.page",
+      color: "bg-blue-700 hover:bg-blue-800",
+    },
+    {
+      icon: "ri-pinterest-fill",
+      url: "https://in.pinterest.com/annkitpandey/",
+      color: "bg-red-500 hover:bg-red-600",
     },
   ];
 
@@ -123,7 +133,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-{/* 
+            {/* 
             <div>
               <h4 className="text-lg font-semibold mb-4">Stay Updated</h4>
               <form
@@ -242,7 +252,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2025 Ankit Pandey - Digital Marketer & Trainer. All rights
+              © 2026 Ankit Pandey - Digital Marketer & Trainer. All rights
               reserved.
             </div>
             <div className="flex items-center space-x-6">

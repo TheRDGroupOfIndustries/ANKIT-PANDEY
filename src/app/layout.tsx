@@ -2,6 +2,7 @@ export const dynamic = 'force-dynamic';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "remixicon/fonts/remixicon.css";
 // import { Poppins, Pacifico } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -45,9 +46,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
-         <Navbar />
-          <Toaster position="top-right" /> 
+
+        <Navbar />
+        <Toaster position="top-right" />
         {children}
         <Footer />
       </body>

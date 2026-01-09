@@ -266,8 +266,8 @@ const Contact = () => {
                       Book a free 30-minute consultation
                     </p>
                     <button onClick={() =>
-    window.open("https://calendly.com/annkitpandey/30min", "_blank")
-  }
+                      window.open("https://calendly.com/annkitpandey/30min", "_blank")
+                    }
                       className="text-purple-600 hover:text-purple-700 font-medium text-sm mt-2 cursor-pointer">
                       View Available Times →
                     </button>
@@ -280,39 +280,49 @@ const Contact = () => {
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">
                   Follow Me
                 </h4>
-                <div className="flex space-x-4">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://linkedin.com/in/ankitpandey"
-                    className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer"
-                  >
-                    <i className="ri-linkedin-fill text-xl"></i>
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://instagram.com/ankitpandey"
-                    className="w-12 h-12 bg-pink-600 hover:bg-pink-700 rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer"
-                  >
-                    <i className="ri-instagram-fill text-xl"></i>
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://youtube.com/@ankitpandey"
-                    className="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer"
-                  >
-                    <i className="ri-youtube-fill text-xl"></i>
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://twitter.com/ankitpandey"
-                    className="w-12 h-12 bg-blue-400 hover:bg-blue-500 rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer"
-                  >
-                    <i className="ri-twitter-fill text-xl"></i>
-                  </a>
+                <div className="flex flex-wrap gap-4">
+                  {[
+                    {
+                      icon: "ri-linkedin-fill",
+                      url: "https://www.linkedin.com/in/annkitpandey/",
+                      color: "bg-blue-600 hover:bg-blue-700",
+                    },
+                    {
+                      icon: "ri-instagram-fill",
+                      url: "https://www.instagram.com/annkitpandey",
+                      color: "bg-pink-600 hover:bg-pink-700",
+                    },
+                    {
+                      icon: "ri-youtube-fill",
+                      url: "https://youtube.com/@annkitpandey",
+                      color: "bg-red-600 hover:bg-red-700",
+                    },
+                    {
+                      icon: "ri-twitter-fill",
+                      url: "https://x.com/annkitpandey",
+                      color: "bg-blue-400 hover:bg-blue-500",
+                    },
+                    {
+                      icon: "ri-facebook-fill",
+                      url: "https://www.facebook.com/annkitpandey.page",
+                      color: "bg-blue-700 hover:bg-blue-800",
+                    },
+                    {
+                      icon: "ri-pinterest-fill",
+                      url: "https://in.pinterest.com/annkitpandey/",
+                      color: "bg-red-500 hover:bg-red-600",
+                    },
+                  ].map((social, idx) => (
+                    <a
+                      key={idx}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={social.url}
+                      className={`w-12 h-12 ${social.color} rounded-lg flex items-center justify-center text-white transition-colors duration-300 cursor-pointer`}
+                    >
+                      <i className={`${social.icon} text-xl`}></i>
+                    </a>
+                  ))}
                 </div>
               </div>
 
