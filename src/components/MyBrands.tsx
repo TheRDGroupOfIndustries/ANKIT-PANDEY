@@ -11,7 +11,7 @@ const brands = [
     name: "SkyTouch Brand Logo",
   },
   {
-    image: "/brands/LeadsX_1.jpg",
+    image: "/brands/Lead.jpeg",
     name: "LeadsX Brand Logo",
   },
 ];
@@ -44,7 +44,7 @@ const MyBrands = () => {
                 alt={brand.name}
                 width={300}
                 height={300}
-                className="shadow-md rounded-xl w-70 sm:w-72 md:w-80 object-cover"
+                className="shadow-md rounded-xl w-70 sm:w-72 md:w-80 object-cover "
               />
             </div>
           ))}

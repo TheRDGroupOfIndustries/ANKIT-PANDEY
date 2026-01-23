@@ -86,10 +86,10 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-5 gap-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* About & Social */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="md:col-span-2 lg:col-span-2 space-y-6">
             <div>
               <h3
                 className="text-2xl font-bold mb-4"
@@ -106,7 +106,7 @@ const Footer = () => {
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 {socialLinks.map((social, idx) => (
                   <a
                     key={idx}
@@ -183,12 +183,12 @@ const Footer = () => {
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <div className="text-gray-400 text-sm">
               © 2026 Ankit Pandey - Digital Marketer & Trainer. All rights
               reserved.
             </div>
-            <div className="flex items-center space-x-6">
+            <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
               {footerLinks.map((link, idx) => (
                 <a
                   key={idx}

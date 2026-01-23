@@ -48,7 +48,7 @@ const Homecomponent = () => {
 
   return (
     <div id="home">
-      <section className="relative min-h-screen mt-10 py-10 flex flex-col overflow-hidden bg-linear-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <section className="relative min-h-screen mt-10 py-10 md:py-20 flex flex-col overflow-hidden bg-linear-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Background shapes */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -68,8 +68,8 @@ const Homecomponent = () => {
 
         {/* Hero content */}
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center">
-          <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 items-center py-10 gap-10 px-6 lg:px-8">
-            <div className="text-left space-y-12 col-span-3">
+          <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 items-center py-6 md:py-10 gap-10 px-6 lg:px-8">
+            <div className="text-center lg:text-left space-y-8 md:space-y-12 col-span-1 lg:col-span-3 order-2 lg:order-1">
               <div className="space-y-8">
                 <h1 className="text-4xl lg:text-7xl font-black leading-tight text-white">
                   Elevate Your
@@ -99,12 +99,12 @@ const Homecomponent = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 items-center">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center lg:justify-start items-center">
                 <Link
                   href="https://calendly.com/annkitpandey/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-4 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap overflow-hidden"
+                  className="w-full sm:w-auto text-center group relative bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap overflow-hidden"
                 >
                   <span className="relative z-10">Book Session</span>
                   <div className="absolute inset-0 bg-linear-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -114,32 +114,32 @@ const Homecomponent = () => {
                     const section = document.getElementById("success");
                     section?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="group border-2 border-slate-400 text-slate-300 hover:bg-white hover:text-slate-900 px-6 py-4 rounded-2xl font-bold text-xl transition-all duration-300 whitespace-nowrap"
+                  className="w-full sm:w-auto group border-2 border-slate-400 text-slate-300 hover:bg-white hover:text-slate-900 px-8 py-4 rounded-2xl font-bold text-xl transition-all duration-300 whitespace-nowrap"
                 >
-                  <span className="flex items-center gap-3">
+                  <span className="flex items-center justify-center gap-3">
                     Watch Success Stories
                     <i className="ri-play-circle-line text-2xl group-hover:scale-110 transition-transform duration-300"></i>
                   </span>
                 </button>
               </div>
             </div>
-            <div className="col-span-2">
-              <div className="relative p-4 bg-white/5 backdrop-blur-lg rounded-[3rem] border border-white/10 shadow-2xl">
+            <div className="col-span-1 lg:col-span-2 order-1 lg:order-2">
+              <div className="relative p-2 md:p-4 bg-white/5 backdrop-blur-lg rounded-[2.5rem] md:rounded-[3rem] border border-white/10 shadow-2xl overflow-hidden">
                 <Image
                   height={500}
                   width={400}
                   src={heroImage}
                   alt="Digital Marketing Success"
-                  className="w-full h-auto rounded-[2.5rem] object-cover border-4 border-cyan-500/50"
+                  className="w-full h-auto rounded-[2rem] md:rounded-[2.5rem] object-cover border-2 md:border-4 border-cyan-500/50"
                 />
                 {/* Optional glow effect behind the image */}
-                <div className="absolute inset-0 m-4 rounded-[2.5rem] bg-cyan-500/10 blur-xl -z-10 animate-pulse-slow" />
+                <div className="absolute inset-0 m-4 rounded-[2rem] md:rounded-[2.5rem] bg-cyan-500/10 blur-xl -z-10 animate-pulse-slow" />
               </div>
             </div>
           </div>
           {/* Stats */}
-          <div className="mt-16">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="mt-10 md:mt-16 w-full px-6 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
               {stats.map((stat) => (
                 <div
                   key={stat.label}

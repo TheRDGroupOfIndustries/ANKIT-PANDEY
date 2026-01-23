@@ -28,23 +28,23 @@ const Navbar: React.FC = () => {
       router.push("/roi");
       return;
     }
-        const currentScrollParam = searchParams.get("scroll");
+    const currentScrollParam = searchParams.get("scroll");
 
-        if (currentScrollParam === lower) {
-            const section = document.getElementById(lower);
-            if (section) {
-                const navHeight = 80; 
-                const targetPosition = section.offsetTop - navHeight;
+    if (currentScrollParam === lower) {
+      const section = document.getElementById(lower);
+      if (section) {
+        const navHeight = 80;
+        const targetPosition = section.offsetTop - navHeight;
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: "smooth",
-                });
-            }
-            return; // EXIT the function after manual scroll
-        }
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+      return; // EXIT the function after manual scroll
+    }
 
-        router.push(`/?scroll=${lower}`);
+    router.push(`/?scroll=${lower}`);
   };
 
   const navItems = [
@@ -151,9 +151,8 @@ const Navbar: React.FC = () => {
         {/* Mobile Menu Content (Visible only on mobile, slides open/closed) */}
         <div
           id="mobile-menu"
-          className={`lg:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-            isOpen ? "max-h-screen border-t border-gray-700" : "max-h-0"
-          } bg-gray-900`}
+          className={`lg:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${isOpen ? "max-h-screen border-t border-gray-700" : "max-h-0"
+            } bg-gray-900`}
         >
           <div className="px-2 pt-2 pb-4 space-y-2 sm:px-3">
             {/* Navigation Links */}
