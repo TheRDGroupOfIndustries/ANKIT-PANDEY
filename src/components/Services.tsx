@@ -44,23 +44,23 @@ const Services = () => {
   ];
 
   return (
-    <div id="services" className=" py-10">
-      <div className=" flex justify-center items-center mb-2">
-        <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-          What I Do
+    <div id="services" className="py-10">
+      <div className="flex justify-center items-center mb-2">
+        <h1 className="text-3xl md:text-5xl font-extrabold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight md:leading-snug">
+          What I Do
         </h1>
       </div>
-      <section className=" bg-white">
+      <section className="bg-white pb-10 md:pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-6">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl text-gray-900 mb-4 md:mb-6 leading-tight">
               Smart Strategies. Real Growth. Measurable{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
                 Impact.
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               I help brands cut through the noise with powerful digital strategies that don’t just look good,
               they perform. From planning to execution, every solution is built to drive visibility,
               engagement and real business results.
@@ -68,11 +68,11 @@ const Services = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-12">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col "
+                className="group bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col "
               >
                 <div
                   className={`w-16 h-16 bg-linear-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -134,9 +134,9 @@ const Services = () => {
                     section?.scrollIntoView({ behavior: "smooth" });
                   }}
                   // Reduced text size on mobile (text-base) compared to default (text-lg)
-                  className="bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
+                  className="bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 whitespace-normal sm:whitespace-nowrap cursor-pointer"
                 >
-                  Start Your Free Strategy Call​
+                  Start Your Free Strategy Call
                 </button>
                 <button
                   onClick={() => {
@@ -144,7 +144,7 @@ const Services = () => {
                     section?.scrollIntoView({ behavior: "smooth" });
                   }}
                   // Reduced text size on mobile (text-base) compared to default (text-lg)
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 whitespace-nowrap cursor-pointer"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 whitespace-normal sm:whitespace-nowrap cursor-pointer"
                 >
                   Explore My Work
                 </button>

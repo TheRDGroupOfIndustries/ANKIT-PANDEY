@@ -14,37 +14,40 @@ const Navbar: React.FC = () => {
     setIsOpen(false);
 
     const lower = item.toLowerCase();
+    const isHomePage = window.location.pathname === "/";
 
-    if (lower === "blog") {
-      router.push("/blog");
+    // Sections that exist on the home page
+    const homeSections = ["home", "about", "services", "training", "portfolio", "blog", "contact"];
+
+    if (homeSections.includes(lower)) {
+      if (isHomePage) {
+        // Direct smooth scroll if already on home page
+        const section = document.getElementById(lower);
+        if (section) {
+          const navHeight = 80;
+          const targetPosition = section.offsetTop - navHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+          // Update URL without jumping to top
+          router.replace(`/?scroll=${lower}`, { scroll: false });
+        }
+      } else {
+        // Navigate to home with scroll param, preventing jump to top
+        router.push(`/?scroll=${lower}`, { scroll: false });
+      }
       return;
     }
 
-    if (lower === "portfolio") {
-      router.push("/portfolio");
-      return;
-    }
+    // Other pages
     if (lower === "roi") {
       router.push("/roi");
       return;
     }
-    const currentScrollParam = searchParams.get("scroll");
 
-    if (currentScrollParam === lower) {
-      const section = document.getElementById(lower);
-      if (section) {
-        const navHeight = 80;
-        const targetPosition = section.offsetTop - navHeight;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
-      }
-      return; // EXIT the function after manual scroll
-    }
-
-    router.push(`/?scroll=${lower}`);
+    // Default behavior for any other nav items
+    router.push(`/${lower}`, { scroll: false });
   };
 
   const navItems = [

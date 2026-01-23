@@ -65,8 +65,8 @@ const Portfolio = ({ projects }: { projects: Project[] }) => {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer ${selectedCategory === category
-                    ? "bg-purple-600 text-white shadow-lg"
-                    : "bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-600 border border-gray-200"
+                  ? "bg-purple-600 text-white shadow-lg"
+                  : "bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-600 border border-gray-200"
                   }`}
               >
                 {category}

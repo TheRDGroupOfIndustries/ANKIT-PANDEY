@@ -16,31 +16,31 @@ interface Course {
   bgGradient?: string;
 }
 
-const Traning = ({ courses }: { courses: Course[] }) => {
+const Training = ({ courses }: { courses: Course[] }) => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<string>("");
   return (
-    <div id="training" className="bg-gray-50 py-10">
+    <div id="training" className="bg-gray-50">
       <PaymentModal
         isOpen={openModal}
         onClose={() => setOpenModal(false)}
         courseTitle={selectedCourse}
       />
 
-      <div className=" flex justify-center items-center">
-        <h1 className="text-4xl md:text-5xl h-16 font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+      <div className="flex justify-center items-center text-center px-6 mb-4 md:mb-6">
+        <h1 className="text-3xl md:text-5xl font-extrabold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight md:leading-snug">
           Training Programs
         </h1>
       </div>
 
-      <section className=" bg-gray-50">
+      <section className="bg-gray-50 pb-10 md:pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-8">
-            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl text-gray-900 mb-4 md:mb-6 leading-tight">
               Learn. Practice. Master. Grow.
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Upgrade your skills with expert-led programs designed to turn
               beginners into confident digital marketers and professionals into
               industry leaders.
@@ -150,7 +150,7 @@ const Traning = ({ courses }: { courses: Course[] }) => {
                     section?.scrollIntoView({ behavior: "smooth" });
                   }}
                   // Reduced text and padding on mobile (text-base, px-6, py-3)
-                  className="bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
+                  className="bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 whitespace-normal sm:whitespace-nowrap cursor-pointer"
                 >
                   Book Your Free Consultation
                 </button>
@@ -160,7 +160,7 @@ const Traning = ({ courses }: { courses: Course[] }) => {
                     section?.scrollIntoView({ behavior: "smooth" });
                   }}
                   // Reduced text and padding on mobile (text-base, px-6, py-3)
-                  className="border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 whitespace-nowrap cursor-pointer"
+                  className="border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 whitespace-normal sm:whitespace-nowrap cursor-pointer"
                 >
                   Explore All Courses
                 </button>
@@ -173,4 +173,4 @@ const Traning = ({ courses }: { courses: Course[] }) => {
   );
 };
 
-export default Traning;
+export default Training;

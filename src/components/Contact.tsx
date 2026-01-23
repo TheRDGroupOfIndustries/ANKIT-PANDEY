@@ -44,32 +44,32 @@ const Contact = () => {
     }
   };
   return (
-    <div id="contact" className="bg-gray-50 pt-10">
-      <div className="flex justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+    <div id="contact" className="bg-gray-50 pt-10 md:pt-16">
+      <div className="flex justify-center items-center text-center px-6">
+        <h1 className="text-3xl md:text-5xl font-extrabold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight md:leading-snug">
           {/* Contact Us */}
           Need a Growth Boost?
         </h1>
       </div>
-      <section className=" bg-gray-50 pb-10 ">
+      <section className="bg-gray-50 pb-10 md:pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl  text-gray-900 mb-6">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl text-gray-900 mb-4 md:mb-6 leading-tight">
               Let’s put your business on the fast track to{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-blue-500">
                 success.
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               While you’re waiting, your competitors are already moving ahead. Don’t fall behind, take
               action now and start building momentum today.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
             {/* Contact Form */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Send Me a Message
               </h3>
@@ -217,14 +217,11 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center shrink-0">
                     <i className="ri-phone-line text-white text-xl"></i>
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">
                       Phone
                     </h4>
-                    <p className="text-gray-600">+91 8303777132</p>
-                    {/* <p className="text-sm text-gray-500 mt-1">
-                      Available Mon-Fri, 9AM-6PM EST
-                    </p> */}
+                    <p className="text-gray-600 break-all">+91 8303777132</p>
                   </div>
                 </div>
               </div>
@@ -235,11 +232,11 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-linear-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center shrink-0">
                     <i className="ri-mail-line text-white text-xl"></i>
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">
                       Email
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 break-all">
                       Growth@annkitpandey.com
                     </p>
                     <p className="text-sm text-gray-500 mt-1">

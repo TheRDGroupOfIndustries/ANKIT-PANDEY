@@ -32,13 +32,10 @@ const SuccessStories = () => {
   };
 
   return (
-    <section id="success" className="py-20 bg-white">
+    <section id="success" className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          {/* <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
-            <i className="ri-chat-quote-line mr-2"></i>Success Stories
-          </div> */}
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Real Stories.{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-green-600 to-emerald-500">
@@ -57,36 +54,6 @@ const SuccessStories = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
-              {/* {Array.from({ length: Math.ceil(ClientReviews.length / 2) }).map(
-                (_, slideIndex) => {
-                  const startIndex = slideIndex * 2;
-                  const group = ClientReviews.slice(startIndex, startIndex + 2);
-
-                  return (
-                    <div key={slideIndex} className="w-full shrink-0">
-                   
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
-                        {group.map((review) => (
-                          <div
-                            key={review.name}
-                            className="relative w-full h-56 rounded-2xl overflow-hidden shadow-lg border border-gray-200"
-                          >
-                            <Image
-                              src={review.image}
-                              alt="Client Review Image"
-                              fill
-                              className="object-contain"
-                              sizes="(max-width: 768px) 100vw,
-                             (max-width: 1200px) 50vw,
-                             50vw"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                }
-              )} */}
               {ClientReviews.map((review, index) => (
                 <div key={index} className="w-full shrink-0 px-4">
                   <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200">

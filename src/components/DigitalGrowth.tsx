@@ -34,7 +34,7 @@ const stats = [
 
 const DigitalGrowth: React.FC = () => {
   return (
-    <section className="py-20 bg-linear-to-r from-blue-900 via-blue-800 to-cyan-700 relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-linear-to-r from-blue-900 via-blue-800 to-cyan-700 relative overflow-hidden">
       {/* Background overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-white/20 to-transparent"></div>
@@ -44,19 +44,19 @@ const DigitalGrowth: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <div className="max-w-5l mx-auto space-y-8">
           {/* Heading */}
-          <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
             Start Your Digital Growth{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-orange-300">
               Journey Today!
             </span>
           </h2>
-          <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
             Turn ambition into action with strategies that deliver real, measurable results.
             Join thousands of entrepreneurs, founders and marketers who’ve transformed their
             businesses using proven digital frameworks that actually work.
           </p>
 
-          <h2 className="text-4xl lg:text-5xl font-bold text-white  mb-6">Why Choose This Path?</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Why Choose This Path?</h2>
 
           {/* Features */}
           <div className="grid md:grid-cols-3 gap-8 my-12">
@@ -79,22 +79,22 @@ const DigitalGrowth: React.FC = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
             <button
               onClick={() => {
                 const section = document.getElementById("contact");
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="bg-linear-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer"
+              className="w-full sm:w-auto bg-linear-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-normal sm:whitespace-nowrap cursor-pointer"
             >
-              Book Your Free Strategy Call​
+              Book Your Free Strategy Call
             </button>
             <button
               onClick={() => {
                 const section = document.getElementById("training");
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="border-2 border-cyan-300 text-cyan-300 hover:bg-cyan-300 hover:text-blue-900 px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 shadow-xl whitespace-nowrap cursor-pointer"
+              className="w-full sm:w-auto border-2 border-cyan-300 text-cyan-300 hover:bg-cyan-300 hover:text-blue-900 px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-lg sm:text-xl transition-all duration-300 shadow-xl whitespace-normal sm:whitespace-nowrap cursor-pointer"
             >
               Explore Training Programs
             </button>
